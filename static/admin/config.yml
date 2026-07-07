@@ -1,0 +1,256 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Content: create {{collection}} “{{slug}}”"
+    update: "Content: update {{collection}} “{{slug}}”"
+    delete: "Content: delete {{collection}} “{{slug}}”"
+    uploadMedia: "Content: upload “{{path}}”"
+    deleteMedia: "Content: delete “{{path}}”"
+
+# Lets `npx decap-server` proxy the CMS against the local repo for testing;
+# has no effect in production.
+local_backend: true
+
+site_url: https://chess.bc.ca
+logo_url: /logo.svg
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ---------------------------------------------------------------- News
+  - name: news
+    label: News
+    label_singular: News Item
+    folder: content/news
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    # The hidden type field keeps Hugo's _index.md section pages (edited under
+    # "Pages") from showing up as entries in this collection.
+    filter: { field: type, value: news }
+    fields:
+      - { name: type, widget: hidden, default: news }
+      - { label: Title, name: title, widget: string }
+      - label: Posted
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: Expires
+        name: expiry_date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+        default: ""
+        hint: >-
+          The item moves from the home page to the News Archive on this date.
+          Leave blank for the default: two weeks after the posted date.
+      - { label: Body, name: body, widget: markdown }
+
+  # --------------------------------------------------------------- Clubs
+  - name: clubs
+    label: Clubs
+    label_singular: Club
+    folder: content/clubs
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{city}}"
+    sortable_fields: [city, title]
+    filter: { field: type, value: clubs }
+    fields:
+      - { name: type, widget: hidden, default: clubs }
+      - { label: Club Name, name: title, widget: string }
+      - { label: City, name: city, widget: string, hint: "Used to group clubs on the Clubs page, e.g. Burnaby" }
+      - { label: Meeting Times, name: meets, widget: string, required: false, hint: "e.g. Saturdays, 2:00–3:30 pm" }
+      - { label: Location, name: location, widget: string, required: false }
+      - { label: Contact, name: contact, widget: string, required: false, hint: "Name and/or phone number" }
+      - { label: Email, name: email, widget: string, required: false }
+      - { label: Website, name: website, widget: string, required: false }
+      - { label: Image, name: image, widget: image, required: false }
+      - label: Last Update
+        name: last_update
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+        hint: "When the club last confirmed its information"
+      - { label: Notes, name: body, widget: markdown, required: false }
+
+  # --------------------------------------------------------- Instruction
+  - name: instruction
+    label: Chess Instruction
+    label_singular: Instruction Listing
+    folder: content/instruction
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: [title]
+    filter: { field: type, value: instruction }
+    fields:
+      - { name: type, widget: hidden, default: instruction }
+      - { label: Name, name: title, widget: string }
+      - { label: Website, name: website, widget: string, required: false }
+      - { label: Facebook, name: facebook, widget: string, required: false }
+      - { label: Email, name: email, widget: string, required: false }
+      - { label: Phone, name: phone, widget: string, required: false }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Description, name: body, widget: markdown }
+
+  # ----------------------------------------------------------- Bulletins
+  - name: bulletins
+    label: BC Bulletins
+    label_singular: Bulletin
+    folder: content/bulletins
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    media_folder: "/static/bulletins"
+    public_folder: "/bulletins"
+    filter: { field: type, value: bulletins }
+    fields:
+      - { name: type, widget: hidden, default: bulletins }
+      - { label: Title, name: title, widget: string, hint: "e.g. BC Bulletin #486" }
+      - { label: Number, name: number, widget: number, value_type: int, hint: "Issue number — the list is sorted by this" }
+      - label: Posted
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - { label: PDF, name: pdf, widget: file, hint: "Upload the bulletin PDF" }
+      - { label: Contents, name: description, widget: string, required: false, hint: "Main topics, shown in the bulletins index" }
+      - { label: Notes, name: body, widget: markdown, required: false }
+
+  # ------------------------------------------------------ Lists (data/)
+  - name: data
+    label: Lists
+    editor:
+      preview: false
+    files:
+      - name: repeating_events
+        label: Repeating Events
+        file: data/repeating_events.yaml
+        fields:
+          - label: Repeating Events
+            name: events
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Schedule, name: schedule, widget: string, required: false, hint: "e.g. Every Sunday" }
+              - { label: Location, name: location, widget: string, required: false }
+              - { label: Details, name: details, widget: text, required: false }
+              - { label: Website, name: website, widget: string, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+
+      - name: arbiters
+        label: Arbiters
+        file: data/arbiters.yaml
+        fields:
+          - { label: Last Updated, name: updated, widget: string, hint: "e.g. 15 June 2026" }
+          - label: Groups
+            name: groups
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Group Title, name: title, widget: string, hint: "e.g. National Arbiters" }
+              - label: Arbiters
+                name: arbiters
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: CFC No., name: cfc_no, widget: string, required: false }
+                  - { label: Email, name: email, widget: string, required: false }
+                  - { label: Comments, name: comments, widget: string, required: false }
+
+      - name: links
+        label: Links
+        file: data/links.yaml
+        fields:
+          - label: Link Groups
+            name: groups
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Group Title, name: title, widget: string, hint: "e.g. BC Chess Links" }
+              - label: Links
+                name: links
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: url, widget: string }
+                  - { label: Description, name: description, widget: string, required: false }
+
+      - name: champions
+        label: Champions
+        file: data/champions.yaml
+        fields:
+          - label: Sections
+            name: sections
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Section Title, name: title, widget: string, hint: "e.g. BC Champions" }
+              - label: Entries
+                name: entries
+                widget: list
+                summary: "{{fields.year}} — {{fields.name}}"
+                fields:
+                  - { label: Year, name: year, widget: string }
+                  - { label: "Name(s)", name: name, widget: string }
+
+      - name: banners
+        label: Banners
+        file: data/banners.yaml
+        fields:
+          - label: Banners
+            name: banners
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Shown in the sidebar in random order (reshuffled on every site build)."
+            fields:
+              - { label: Name, name: name, widget: string }
+              - label: Image
+                name: image
+                widget: image
+                media_folder: "/static/images/banners"
+                public_folder: "/images/banners"
+              - { label: Link, name: link, widget: string }
+
+  # --------------------------------------------------------------- Pages
+  - name: pages
+    label: Pages
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: Home Page Intro
+        file: content/_index.md
+        fields: &page_fields
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - { name: about, label: About, file: content/about.md, fields: *page_fields }
+      - { name: membership, label: Membership, file: content/membership.md, fields: *page_fields }
+      - { name: executive, label: Executive, file: content/executive.md, fields: *page_fields }
+      - { name: agm, label: AGM, file: content/agm.md, fields: *page_fields }
+      - { name: policies, label: Policies, file: content/policies.md, fields: *page_fields }
+      - { name: life_members, label: Life Members, file: content/life-members.md, fields: *page_fields }
+      - { name: games, label: Game Databases, file: content/games.md, fields: *page_fields }
+      - { name: event_proposal, label: Event Proposal, file: content/event-proposal.md, fields: *page_fields }
+      - { name: events_intro, label: Events Page Intro, file: content/events/_index.md, fields: *page_fields }
+      - { name: clubs_intro, label: Clubs Page Intro, file: content/clubs/_index.md, fields: *page_fields }
+      - { name: instruction_intro, label: Instruction Page Intro, file: content/instruction/_index.md, fields: *page_fields }
+      - { name: bulletins_intro, label: Bulletins Page Intro, file: content/bulletins/_index.md, fields: *page_fields }
+      - { name: news_intro, label: News Archive Intro, file: content/news/_index.md, fields: *page_fields }
+      - { name: arbiters_page, label: Arbiters Page Intro, file: content/arbiters.md, fields: *page_fields }
+      - { name: champions_page, label: Champions Page Intro, file: content/champions.md, fields: *page_fields }
+      - { name: links_page, label: Links Page Intro, file: content/links.md, fields: *page_fields }

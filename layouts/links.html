@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range hugo.Data.links.groups }}
+<h2>{{ .title }}</h2>
+<ul class="links-list">
+  {{ range .links }}
+  <li>
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>{{ with .description }} — {{ . }}{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

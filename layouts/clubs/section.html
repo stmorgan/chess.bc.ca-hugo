@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ $groups := .Pages.GroupByParam "city" }}
+<nav class="city-index" aria-label="Cities">
+  <ul>
+    {{ range $groups }}
+    <li><a href="#{{ anchorize .Key }}">{{ .Key }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
+
+{{ range $groups }}
+<h2 id="{{ anchorize .Key }}">{{ .Key }}</h2>
+{{ range .Pages.ByTitle }}
+<article class="card">
+  <h3>{{ .Title }}</h3>
+  {{ with .Params.meets }}<p><strong>Meets:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.location }}<p><strong>Location:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.contact }}<p><strong>Contact:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.email }}<p><strong>Email:</strong> <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+  {{ with .Params.website }}<p><strong>Website:</strong> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
+  {{ with .Params.image }}<p><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></p>{{ end }}
+  {{ .Content }}
+  {{ with .Params.last_update }}<p class="news-date">Last update: {{ time.Format "January 2006" . }}</p>{{ end }}
+</article>
+{{ end }}
+{{ end }}
+{{ end }}

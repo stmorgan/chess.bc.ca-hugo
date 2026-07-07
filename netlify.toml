@@ -1,0 +1,111 @@
+[build]
+command = "hugo --gc --minify"
+publish = "public"
+
+[build.environment]
+HUGO_VERSION = "0.163.3"
+
+[context.deploy-preview]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+# ---- Redirects from the old PHP site (protect bookmarks, inbound links, SEO) ----
+
+# The constitution PDF was mixed-case on the old site
+[[redirects]]
+from = "/BCCFconstitution.pdf"
+to = "/bccfconstitution.pdf"
+status = 301
+
+# Old bulletin deep links used a capital-B directory
+[[redirects]]
+from = "/Bulletins/*"
+to = "/bulletins/:splat"
+status = 301
+
+[[redirects]]
+from = "/index.php"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/about.php"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/clubs.php"
+to = "/clubs/"
+status = 301
+
+[[redirects]]
+from = "/events.php"
+to = "/events/"
+status = 301
+
+[[redirects]]
+from = "/instruction.php"
+to = "/instruction/"
+status = 301
+
+[[redirects]]
+from = "/bcbulletin.php"
+to = "/bulletins/"
+status = 301
+
+[[redirects]]
+from = "/news_archive.php"
+to = "/news/"
+status = 301
+
+[[redirects]]
+from = "/bcchamps.php"
+to = "/champions/"
+status = 301
+
+[[redirects]]
+from = "/membership.php"
+to = "/membership/"
+status = 301
+
+[[redirects]]
+from = "/executive.php"
+to = "/executive/"
+status = 301
+
+[[redirects]]
+from = "/AGM.php"
+to = "/agm/"
+status = 301
+
+[[redirects]]
+from = "/Policy.php"
+to = "/policies/"
+status = 301
+
+[[redirects]]
+from = "/lifemembers.php"
+to = "/life-members/"
+status = 301
+
+[[redirects]]
+from = "/games.php"
+to = "/games/"
+status = 301
+
+[[redirects]]
+from = "/links.php"
+to = "/links/"
+status = 301
+
+[[redirects]]
+from = "/crosstables.php"
+to = "/crosstables/"
+status = 301
+
+[[redirects]]
+from = "/bccfSanctionedEvents.html"
+to = "/event-proposal/"
+status = 301

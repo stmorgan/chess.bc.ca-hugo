@@ -1,0 +1,16 @@
+# Sidebar banner ads — rendered in random order on every build.
+# Edit via Decap CMS. Add or remove entries freely; templates do not
+# assume any particular count.
+banners:
+  - name: Vancouver Chess School
+    image: /images/banners/vsc-banner.jpg
+    link: http://www.vanchess.ca/
+  - name: Penny Chess Club
+    image: /images/banners/PennyChessClub.jpg
+    link: http://www.pennychessclub.ca/
+  - name: Richmond Chess Champions
+    image: /images/banners/RCCBanner.jpg
+    link: http://www.richmondchesschampions.com/
+  - name: Fraser Valley Chess Academy
+    image: /images/banners/FVCA_BCCF_sidebar_ad.png
+    link: https://fraservalleychess.com/

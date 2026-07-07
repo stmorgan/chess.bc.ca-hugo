@@ -1,0 +1,20 @@
+# News expiry and banner order are decided at build time, so the site must be
+# rebuilt daily for items to move into the News Archive on their expiry date.
+#
+# Setup (once the Netlify site exists):
+#   1. Netlify → Site configuration → Build & deploy → Build hooks → add one.
+#   2. GitHub → repo Settings → Secrets and variables → Actions → add the hook
+#      URL as NETLIFY_BUILD_HOOK.
+name: Nightly Netlify rebuild
+
+on:
+  schedule:
+    - cron: "17 10 * * *" # 02:17/03:17 Pacific, just after items expire at midnight
+  workflow_dispatch:
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Netlify build hook
+        run: curl -fsS -X POST "${{ secrets.NETLIFY_BUILD_HOOK }}"

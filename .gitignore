@@ -1,0 +1,7 @@
+# Hugo build output
+/public/
+/resources/
+.hugo_build.lock
+
+# Old-site reference copy — content source only, not part of the new site
+/public_html/

@@ -1,0 +1,58 @@
+{{ define "main" }}
+<h1>British Columbia Chess Federation</h1>
+
+<div class="intro">
+  {{ .Content }}
+</div>
+
+<section class="news" aria-labelledby="news-heading">
+  <h2 id="news-heading">News</h2>
+
+  {{ $now := now }}
+  {{ $news := where site.RegularPages "Section" "news" }}
+  {{ range $news.ByDate.Reverse }}
+    {{ if gt (partial "news-expiry.html" .) $now }}
+    <article class="news-item">
+      <h3>{{ .Title }}</h3>
+      {{ .Content }}
+      <p class="news-date">Posted: {{ .Date.Format "January 2, 2006" }}</p>
+    </article>
+    {{ end }}
+  {{ end }}
+
+  <p class="button-row">
+    <a class="button" href="/news/">News Archive</a>
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="events-heading">
+  <h2 id="events-heading">Upcoming Chess Events</h2>
+  <p class="button-row">
+    <a class="button button-green" href="/events/#recurring">Recurring Events</a>
+    <a class="button button-green" href="/events/#calendar">Events Calendar</a>
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="puzzle-heading">
+  <h2 id="puzzle-heading">Daily Puzzle</h2>
+  <div class="puzzle-frame">
+    <iframe src="https://lichess.org/training/frame?theme=brown&bg=light" title="Lichess daily puzzle" allowtransparency="true" frameborder="0"></iframe>
+  </div>
+</section>
+
+{{/* Netlify Identity: editor invite/recovery emails link to the site root;
+     this widget completes signup there, then hands off to /admin/. */}}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (!window.netlifyIdentity) return;
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+<section id="recurring" aria-labelledby="recurring-heading">
+  <h2 id="recurring-heading">Repeating Events</h2>
+
+  {{ range hugo.Data.repeating_events.events }}
+  <article class="card">
+    <h3>{{ .name }}</h3>
+    {{ with .schedule }}<p><strong>Repeating event:</strong> {{ . }}</p>{{ end }}
+    {{ with .location }}<p><strong>Location:</strong> {{ . }}</p>{{ end }}
+    {{ with .details }}{{ . | markdownify }}{{ end }}
+    {{ with .website }}<p><strong>Website:</strong> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
+    {{ with .image }}<p><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></p>{{ end }}
+  </article>
+  {{ end }}
+</section>
+
+<section id="calendar" aria-labelledby="calendar-heading">
+  <h2 id="calendar-heading">Events Calendar</h2>
+  <div class="calendar-frame">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&bgcolor=%2333B679&title=BCCF%20Event%20Calendar&src=YTAyZDk0ZGY4MWZjMjdlZWMzNWY2MGI3NmM1MDRkNzc5NTllMjNhZDRhMjI1YTcxMGUxNzBhMzEwMjJkYTEzMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E67C73&color=%230B8043" title="BCCF Event Calendar"></iframe>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,111 @@
+baseURL = "https://chess.bc.ca/"
+locale = "en-CA"
+# Front-matter dates (news expiry!) are interpreted in this zone; without it
+# they parse as UTC and news would drop off the home page at 4/5 pm Pacific
+# the previous day.
+timeZone = "America/Vancouver"
+title = "British Columbia Chess Federation"
+
+disableKinds = ["taxonomy", "term"]
+
+[params]
+description = "Home of the British Columbia Chess Federation — clubs, tournaments, bulletins, and chess news from around BC."
+
+# Editors write via Decap's rich-text widget; allow inline HTML in markdown
+# instead of goldmark silently dropping it.
+[markup.goldmark.renderer]
+unsafe = true
+
+# No source code on this site — keep crosstable text blocks unstyled
+# so the site's own <pre> styling applies.
+[markup.highlight]
+codeFences = false
+
+[menus]
+
+# Primary navigation — chess activity
+[[menus.main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+
+[[menus.main]]
+name = "Events"
+pageRef = "/events"
+weight = 20
+
+[[menus.main]]
+name = "Clubs"
+pageRef = "/clubs"
+weight = 30
+
+[[menus.main]]
+name = "Instruction"
+pageRef = "/instruction"
+weight = 40
+
+[[menus.main]]
+name = "Bulletins"
+pageRef = "/bulletins"
+weight = 50
+
+[[menus.main]]
+name = "Champions"
+pageRef = "/champions"
+weight = 60
+
+[[menus.main]]
+name = "Links"
+pageRef = "/links"
+weight = 70
+
+# Secondary navigation — the organization
+[[menus.org]]
+name = "About"
+pageRef = "/about"
+weight = 10
+
+[[menus.org]]
+name = "Membership"
+pageRef = "/membership"
+weight = 20
+
+[[menus.org]]
+name = "Executive"
+pageRef = "/executive"
+weight = 30
+
+[[menus.org]]
+name = "AGM"
+pageRef = "/agm"
+weight = 40
+
+[[menus.org]]
+name = "Policies"
+pageRef = "/policies"
+weight = 50
+
+[[menus.org]]
+name = "Constitution"
+url = "/bccfconstitution.pdf"
+weight = 60
+
+[[menus.org]]
+name = "Arbiters"
+pageRef = "/arbiters"
+weight = 70
+
+[[menus.org]]
+name = "Life Members"
+pageRef = "/life-members"
+weight = 80
+
+[[menus.org]]
+name = "Event Proposal"
+pageRef = "/event-proposal"
+weight = 90
+
+[[menus.org]]
+name = "Game Databases"
+pageRef = "/games"
+weight = 100

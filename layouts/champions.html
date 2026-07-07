@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range hugo.Data.champions.sections }}
+<h2>{{ .title }}</h2>
+<div class="champions-list">
+  {{ range .entries }}
+  <p>{{ .year }} — {{ .name }}</p>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}

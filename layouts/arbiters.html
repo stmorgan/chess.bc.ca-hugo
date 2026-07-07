@@ -1,0 +1,28 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ with hugo.Data.arbiters }}
+{{ range .groups }}
+<h2>{{ .title }}</h2>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Name</th><th>CFC No.</th><th>Email</th><th>Comments</th></tr>
+    </thead>
+    <tbody>
+      {{ range .arbiters }}
+      <tr>
+        <td>{{ .name }}</td>
+        <td>{{ .cfc_no }}</td>
+        <td>{{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</td>
+        <td>{{ .comments }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+{{ end }}
+<p class="news-date">Last updated: {{ .updated }}</p>
+{{ end }}
+{{ end }}

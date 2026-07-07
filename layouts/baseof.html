@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+
+{{ partial "nav.html" . }}
+
+<div class="layout">
+  <main class="content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <aside class="sidebar">
+    {{ partial "banners.html" . }}
+  </aside>
+</div>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>

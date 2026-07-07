@@ -1,0 +1,9 @@
+{{- /* Effective expiry of a news page: expiry_date front matter,
+       or posted date + 14 days when unset. */ -}}
+{{- $expiry := "" -}}
+{{- with .Params.expiry_date -}}
+  {{- $expiry = time.AsTime . -}}
+{{- else -}}
+  {{- $expiry = .Date.AddDate 0 0 14 -}}
+{{- end -}}
+{{- return $expiry -}}

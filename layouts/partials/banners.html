@@ -1,0 +1,9 @@
+{{ with hugo.Data.banners.banners }}
+<div class="banners">
+  {{ range shuffle . }}
+  <a href="{{ .link }}" target="_blank" rel="noopener" class="banner">
+    <img src="{{ .image }}" alt="{{ .name }}" loading="lazy">
+  </a>
+  {{ end }}
+</div>
+{{ end }}

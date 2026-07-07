@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ $now := now }}
+{{ range .Pages.ByDate.Reverse }}
+  {{ $expiry := partial "news-expiry.html" . }}
+  {{ if le $expiry $now }}
+  <article class="news-item">
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    <p class="news-date">Posted: {{ .Date.Format "January 2, 2006" }}</p>
+  </article>
+  {{ end }}
+{{ end }}
+{{ end }}

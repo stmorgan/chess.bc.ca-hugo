@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Bulletin</th><th>Date</th><th>Contents</th></tr>
+    </thead>
+    <tbody>
+      {{ range sort .Pages "Params.number" "desc" }}
+      <tr>
+        <td><a href="{{ .Params.pdf }}" target="_blank" rel="noopener">{{ .Title }}</a></td>
+        <td>{{ if not .Date.IsZero }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}</td>
+        <td>{{ .Params.description }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+{{ end }}

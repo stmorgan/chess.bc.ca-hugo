@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range .Pages.ByTitle }}
+<article class="card">
+  <h3>{{ .Title }}</h3>
+  {{ .Content }}
+  {{ with .Params.website }}<p><strong>Website:</strong> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
+  {{ with .Params.facebook }}<p><strong>Facebook:</strong> {{ if hasPrefix . "http" }}<a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</p>{{ end }}
+  {{ with .Params.email }}<p><strong>Email:</strong> <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+  {{ with .Params.phone }}<p><strong>Phone:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.image }}<p><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></p>{{ end }}
+</article>
+{{ end }}
+{{ end }}
