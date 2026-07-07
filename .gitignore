@@ -5,3 +5,6 @@
 
 # Old-site reference copy — content source only, not part of the new site
 /public_html/
+
+# Local Netlify folder
+.netlify
