@@ -9,7 +9,9 @@
 </head>
 <body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/decap-cms@^3.8.4/dist/decap-cms.js"></script>
+  <!-- Self-hosted Decap bundle (v3.8.x) — the CMS must not depend on a CDN
+       being up. To upgrade: replace this file with a newer dist build. -->
+  <script src="/admin/decap-cms.js"></script>
   <script>
     // News items default to expiring two weeks after their posted date.
     // Decap can't express "posted + 14 days" as a field default, so fill
