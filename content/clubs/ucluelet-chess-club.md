@@ -8,4 +8,3 @@ We meet every second Tuesday at 6pm at the Army, Navy, and Airforce Veterans Clu
 
 The best way to learn about us or get in touch is through our Facebook page: [https://www.facebook.com/share/DjXrtTbqMVBD9w1J/?mibextid=K35XfP](https://www.facebook.com/share/DjXrtTbqMVBD9w1J/?mibextid=K35XfP)
 
-</p
