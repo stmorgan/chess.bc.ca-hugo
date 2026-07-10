@@ -1,486 +1,488 @@
-# BC Champions by year — edited via Decap CMS.
 sections:
-  - title: "BC Champions"
+  - title: BC Champions
     entries:
       - year: "1916"
-        name: "John M. Ewing"
+        name: John M. Ewing
       - year: "1917"
-        name: "Bertram A. Yates"
+        name: Bertram A. Yates
       - year: "1918"
-        name: "Bertram A. Yates"
+        name: Bertram A. Yates
       - year: "1919"
-        name: "John M. Ewing"
+        name: John M. Ewing
       - year: "1920"
-        name: "John M. Ewing"
+        name: John M. Ewing
       - year: "1921"
-        name: "John M. Ewing/Bertram A. Yates"
+        name: John M. Ewing/Bertram A. Yates
       - year: "1922"
-        name: "John J. Ewing"
+        name: John J. Ewing
       - year: "1923"
-        name: "John M. Ewing/William J. Barker"
+        name: John M. Ewing/William J. Barker
       - year: "1924"
-        name: "William J. Barker"
+        name: William J. Barker
       - year: "1925"
-        name: "Max Enke"
+        name: Max Enke
       - year: "1926"
-        name: "William J. Barker"
+        name: William J. Barker
       - year: "1927"
-        name: "Max Enke"
+        name: Max Enke
       - year: "1928"
-        name: "William J. Barker"
+        name: William J. Barker
       - year: "1929"
-        name: "Jack M. Taylor"
+        name: Jack M. Taylor
       - year: "1930"
-        name: "Jack M. Taylor"
+        name: Jack M. Taylor
       - year: "1931"
-        name: "Charles F. Millar"
+        name: Charles F. Millar
       - year: "1932"
-        name: "Charles F. Millar"
+        name: Charles F. Millar
       - year: "1933"
-        name: "Charles F. Millar"
+        name: Charles F. Millar
       - year: "1935"
-        name: "C.F. Goodman"
+        name: C.F. Goodman
       - year: "1936"
-        name: "John M. Ewing"
+        name: John M. Ewing
       - year: "1937"
-        name: "Charles F. Millar"
+        name: Charles F. Millar
       - year: "1938"
-        name: "Jack M. Taylor"
+        name: Jack M. Taylor
       - year: "1939"
-        name: "Einar Gislesen/A. Jacobsen"
+        name: Einar Gislesen/A. Jacobsen
       - year: "1940"
-        name: "W.E. Frank Fillery/Bertram A. Yates"
+        name: W.E. Frank Fillery/Bertram A. Yates
       - year: "1941"
-        name: "Leo M. Duval"
+        name: Leo M. Duval
       - year: "1942"
-        name: "Leo M. Duval"
+        name: Leo M. Duval
       - year: "1943"
-        name: "Leo M. Duval"
+        name: Leo M. Duval
       - year: "1944"
-        name: "Einar Gislesen"
+        name: Einar Gislesen
       - year: "1945"
-        name: "Jack M. Taylor"
+        name: Jack M. Taylor
       - year: "1946"
-        name: "Leo M. Duval"
+        name: Leo M. Duval
       - year: "1947"
-        name: "Abe Helman"
+        name: Abe Helman
       - year: "1948"
-        name: "Abe Helman"
+        name: Abe Helman
       - year: "1949"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1950"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1951"
-        name: "Maurice Pratt"
+        name: Maurice Pratt
       - year: "1952"
-        name: "Maxime Eberhard"
+        name: Maxime Eberhard
       - year: "1953"
-        name: "Tauno Saila/Jack M. Taylor"
+        name: Tauno Saila/Jack M. Taylor
       - year: "1954"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1955"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1956"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1957"
-        name: "Miervaldis Jursevskis"
+        name: Miervaldis Jursevskis
       - year: "1958"
-        name: "Elod Macskasy"
+        name: Elod Macskasy
       - year: "1959"
-        name: "Elod Macskasy"
+        name: Elod Macskasy
       - year: "1960"
-        name: "Elod Macskasy"
+        name: Elod Macskasy
       - year: "1961"
-        name: "Elod Macskasy"
+        name: Elod Macskasy
       - year: "1962"
-        name: "Elod Macskasy"
+        name: Elod Macskasy
       - year: "1963"
-        name: "Duncan Suttles"
+        name: Duncan Suttles
       - year: "1964"
-        name: "Fred Wuntschek"
+        name: Fred Wuntschek
       - year: "1965"
-        name: "Brian Potter"
+        name: Brian Potter
       - year: "1966"
-        name: "Duncan Suttles"
+        name: Duncan Suttles
       - year: "1967"
-        name: "Colin D. Aykroyd/Elod Macskasy"
+        name: Colin D. Aykroyd/Elod Macskasy
       - year: "1968"
-        name: "Peter Biyiasas"
+        name: Peter Biyiasas
       - year: "1969"
-        name: "Peter Biyiasas"
+        name: Peter Biyiasas
       - year: "1970"
-        name: "Robert D. Zuk"
+        name: Robert D. Zuk
       - year: "1971"
-        name: "Peter Biyiasas"
+        name: Peter Biyiasas
       - year: "1972"
-        name: "Peter Biyiasas"
+        name: Peter Biyiasas
       - year: "1973"
-        name: "Bruce Harper"
+        name: Bruce Harper
       - year: "1974"
-        name: "Joseph Oszvald"
+        name: Joseph Oszvald
       - year: "1975"
-        name: "Bruce Harper / Robert Chow"
+        name: Bruce Harper / Robert Chow
       - year: "1976"
-        name: "Bruce Harper/Joseph Oszvald"
+        name: Bruce Harper/Joseph Oszvald
       - year: "1977"
-        name: "Dan Scoones/Gordon Taylor"
+        name: Dan Scoones/Gordon Taylor
       - year: "1978"
-        name: "Bruce Harper/Alan Hill"
+        name: Bruce Harper/Alan Hill
       - year: "1979"
-        name: "Gordon Taylor"
+        name: Gordon Taylor
       - year: "1980"
-        name: "Bruce Harper"
+        name: Bruce Harper
       - year: "1981"
-        name: "Gordon Taylor"
+        name: Gordon Taylor
       - year: "1982"
-        name: "Gordon Taylor"
+        name: Gordon Taylor
       - year: "1983"
-        name: "Gordon Taylor"
+        name: Gordon Taylor
       - year: "1984"
-        name: "Dan Scoones/Robert D. Zuk"
+        name: Dan Scoones/Robert D. Zuk
       - year: "1985"
-        name: "Nigel Fullbrook"
+        name: Nigel Fullbrook
       - year: "1986"
-        name: "Dave Ross"
+        name: Dave Ross
       - year: "1987"
-        name: "Dave Ross"
+        name: Dave Ross
       - year: "1988"
-        name: "Tom O'Donnell"
+        name: Tom O'Donnell
       - year: "1989"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1990"
-        name: "Harry Moore"
+        name: Harry Moore
       - year: "1991"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1992"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1993"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1994"
-        name: "Jonathan Berry"
+        name: Jonathan Berry
       - year: "1995"
-        name: "Yan Teplitsky"
+        name: Yan Teplitsky
       - year: "1996"
-        name: "Yan Teplitsky"
+        name: Yan Teplitsky
       - year: "1997"
-        name: "Dragoljub Milicevic/Mayo Fuentebella"
+        name: Dragoljub Milicevic/Mayo Fuentebella
       - year: "1998"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1999"
-        name: "Marcel Milat"
+        name: Marcel Milat
       - year: "2000"
-        name: "Jonathan Berry/Dragoljub Milicevic"
+        name: Jonathan Berry/Dragoljub Milicevic
       - year: "2001"
-        name: "Dragoljub Milicevic"
+        name: Dragoljub Milicevic
       - year: "2002"
-        name: "Harry Moore"
+        name: Harry Moore
       - year: "2003"
-        name: "Jack Yoos"
+        name: Jack Yoos
       - year: "2004"
-        name: "Jack Yoos"
+        name: Jack Yoos
       - year: "2005"
-        name: "Jack Yoos"
+        name: Jack Yoos
       - year: "2006"
-        name: "Howard Wu/ Brian McLaren/Jonathan Berry"
+        name: Howard Wu/ Brian McLaren/Jonathan Berry
       - year: "2007"
-        name: "Brian McLaren"
+        name: Brian McLaren
       - year: "2008"
-        name: "Jonathan Berry"
+        name: Jonathan Berry
       - year: "2009"
-        name: "Jack Yoos"
+        name: Jack Yoos
       - year: "2010"
-        name: "Jack Yoos"
+        name: Jack Yoos
       - year: "2011"
-        name: "Maxim Doroshenko & Loren Laceste"
+        name: Maxim Doroshenko & Loren Laceste
       - year: "2012"
-        name: "Butch Villavieja"
+        name: Butch Villavieja
       - year: "2013"
-        name: "Tanraj Sohal"
+        name: Tanraj Sohal
       - year: "2014"
-        name: "Jason Cao"
+        name: Jason Cao
       - year: "2015"
-        name: "Jason Cao"
+        name: Jason Cao
       - year: "2016"
-        name: "Jason Cao"
+        name: Jason Cao
       - year: "2017"
-        name: "Grigorii Morozov & Tanraj Sohal"
+        name: Grigorii Morozov & Tanraj Sohal
       - year: "2018"
-        name: "Grigorii Morozov & Tanraj Sohal"
+        name: Grigorii Morozov & Tanraj Sohal
       - year: "2019"
-        name: "Grigorii Morozov"
+        name: Grigorii Morozov
       - year: "2021"
-        name: "John Doknjas"
+        name: John Doknjas
       - year: "2022"
-        name: "Raymond Kaufman & Keith MacKinnon"
+        name: Raymond Kaufman & Keith MacKinnon
       - year: "2023"
-        name: "Neil Doknjas"
+        name: Neil Doknjas
       - year: "2024"
-        name: "John Doknjas"
+        name: John Doknjas
       - year: "2025"
-        name: "Neil Doknjas"
-  - title: "B.C. Active Champions"
+        name: Neil Doknjas
+  - title: B.C. Active Champions
     entries:
       - year: "1990"
-        name: "Leon Piasetski"
+        name: Leon Piasetski
       - year: "1991"
-        name: "Yasser Seirawan"
+        name: Yasser Seirawan
       - year: "2000"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "2009"
-        name: "Vicente Lee Jr."
+        name: Vicente Lee Jr.
       - year: "2010"
-        name: "Vicente Lee Jr."
+        name: Vicente Lee Jr.
       - year: "2011"
-        name: "Mayo Fuentebella/Maxim Doroshenko"
+        name: Mayo Fuentebella/Maxim Doroshenko
       - year: "2012"
-        name: "Mayo Fuentebella"
+        name: Mayo Fuentebella
       - year: "2013"
-        name: "Mayo Fuentebella"
+        name: Mayo Fuentebella
       - year: "2014"
-        name: "Mayo Fuentebella"
+        name: Mayo Fuentebella
       - year: "2015"
-        name: "Mayo Fuentebella"
+        name: Mayo Fuentebella
       - year: "2016"
-        name: "Raymond Kaufman"
+        name: Raymond Kaufman
       - year: "2017"
-        name: "Tanraj Sohal"
+        name: Tanraj Sohal
       - year: "2018"
-        name: "Raymond Kaufman, Andrew Hemstapat"
+        name: Raymond Kaufman, Andrew Hemstapat
       - year: "2019"
-        name: "Tanraj Sohal, Andrew Hemstapat"
+        name: Tanraj Sohal, Andrew Hemstapat
       - year: "2020"
-        name: "Andrew Hempstapat (online)"
-  - title: "B.C. Women Champions"
+        name: Andrew Hempstapat (online)
+  - title: B.C. Women Champions
     entries:
       - year: "1947"
-        name: "Anna Sharpe"
+        name: Anna Sharpe
       - year: "1957"
-        name: "Erika White"
+        name: Erika White
       - year: "1974"
-        name: "Lynn Stringer"
+        name: Lynn Stringer
       - year: "1976"
-        name: "Bea Sarac"
+        name: Bea Sarac
       - year: "1977"
-        name: "Bea Sarac"
+        name: Bea Sarac
       - year: "1978"
-        name: "Bea Sarac"
+        name: Bea Sarac
       - year: "1992"
-        name: "Lynn Stringer"
+        name: Lynn Stringer
       - year: "1993"
-        name: "Jackie Brien"
+        name: Jackie Brien
       - year: "1994"
-        name: "Jackie Brien"
+        name: Jackie Brien
       - year: "1995"
-        name: "Anca Datcu"
+        name: Anca Datcu
       - year: "1998"
-        name: "Alice Eslava/Lynn Stringer/Yamei Wang"
+        name: Alice Eslava/Lynn Stringer/Yamei Wang
       - year: "2000"
-        name: "Yamei Wang/Valentina Goutor"
+        name: Yamei Wang/Valentina Goutor
       - year: "2003"
-        name: "Valentina Goutor"
+        name: Valentina Goutor
       - year: "2008"
-        name: "Alexandra Botez"
+        name: Alexandra Botez
       - year: "2011"
-        name: "Alexandra Botez"
+        name: Alexandra Botez
       - year: "2015"
-        name: "Andrea Botez"
+        name: Andrea Botez
       - year: "2016"
-        name: "Valeria Gansvind"
+        name: Valeria Gansvind
       - year: "2017"
-        name: "Sherry Tian"
+        name: Sherry Tian
       - year: "2018"
-        name: "Sherry Tian"
+        name: Sherry Tian
       - year: "2021"
-        name: "Bich Ngoc Pham"
+        name: Bich Ngoc Pham
       - year: "2022"
-        name: "Joyce Zhang"
+        name: Joyce Zhang
       - year: "2023"
-        name: "Joyce Zhang"
+        name: Joyce Zhang
       - year: "2024"
-        name: "Lia Rathburn"
+        name: Lia Rathburn
       - year: "2025"
-        name: "Sofia Vigurs"
-  - title: "B.C. Junior Champions"
+        name: Sofia Vigurs
+  - title: B.C. Junior Champions
     entries:
       - year: "1970"
-        name: "Bruce Harper"
+        name: Bruce Harper
       - year: "1974"
-        name: "Glenn Morin"
+        name: Glenn Morin
       - year: "1975"
-        name: "Carl Storey"
+        name: Carl Storey
       - year: "1976"
-        name: "Jeff Reeve"
+        name: Jeff Reeve
       - year: "1977"
-        name: "Terry MacKay"
+        name: Terry MacKay
       - year: "1978"
-        name: "Scott Morgan"
+        name: Scott Morgan
       - year: "1979"
-        name: "James Woodley"
+        name: James Woodley
       - year: "1980"
-        name: "James Woodley"
+        name: James Woodley
       - year: "1981"
-        name: "Marvin Lee"
+        name: Marvin Lee
       - year: "1982"
-        name: "Tom O'Donnell"
+        name: Tom O'Donnell
       - year: "1983"
-        name: "Tom O'Donnell"
+        name: Tom O'Donnell
       - year: "1984"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1985"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1986"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1987"
-        name: "Gary Basanta"
+        name: Gary Basanta
       - year: "1988"
-        name: "Nicholas Spears"
+        name: Nicholas Spears
       - year: "1989"
-        name: "Nicholas Spears"
+        name: Nicholas Spears
       - year: "1990"
-        name: "Howard Wu"
+        name: Howard Wu
       - year: "1991"
-        name: "Sherwin Mohammadnabi"
+        name: Sherwin Mohammadnabi
       - year: "1992"
-        name: "Sherwin Mohammadnabi"
+        name: Sherwin Mohammadnabi
       - year: "1993"
-        name: "Sherwin Mohammadnabi"
+        name: Sherwin Mohammadnabi
       - year: "1994"
-        name: "Howard Wu"
+        name: Howard Wu
       - year: "1995"
-        name: "Andrew Ho"
+        name: Andrew Ho
       - year: "1996"
-        name: "Alfred Pechisker/Shahin Mohammadnabi/Christopher Krys"
+        name: Alfred Pechisker/Shahin Mohammadnabi/Christopher Krys
       - year: "1997"
-        name: "Andrew Ho"
+        name: Andrew Ho
       - year: "1998"
-        name: "Alfred Pechisker"
+        name: Alfred Pechisker
       - year: "1999"
-        name: "Roman Jiganchine"
+        name: Roman Jiganchine
       - year: "2000"
-        name: "John Wilson/Steven Sadoway/Jason Lee"
+        name: John Wilson/Steven Sadoway/Jason Lee
       - year: "2001"
-        name: "Fanhao Meng/Roman Jiganchine/John Wilson/Yamei Wang"
+        name: Fanhao Meng/Roman Jiganchine/John Wilson/Yamei Wang
       - year: "2002"
-        name: "Lucas Davies"
+        name: Lucas Davies
       - year: "2003"
-        name: "Fanhao Meng"
+        name: Fanhao Meng
       - year: "2004"
-        name: "Fanhao Meng/Andrey Kostin/Lucas Davies"
+        name: Fanhao Meng/Andrey Kostin/Lucas Davies
       - year: "2005"
-        name: "Lucas Davies"
+        name: Lucas Davies
       - year: "2006"
-        name: "Louie Jiang/Bindi Cheng"
+        name: Louie Jiang/Bindi Cheng
       - year: "2007"
-        name: "Bindi Cheng"
+        name: Bindi Cheng
       - year: "2008"
-        name: "Tanraj Sohal"
+        name: Tanraj Sohal
       - year: "2009"
-        name: "Janak Awatramani"
+        name: Janak Awatramani
       - year: "2010"
-        name: "Tanraj Sohal"
+        name: Tanraj Sohal
       - year: "2011"
-        name: "John Doknjas"
+        name: John Doknjas
       - year: "2012"
-        name: "Jack Cheng/Tanraj Sohal/Jason Cao"
+        name: Jack Cheng/Tanraj Sohal/Jason Cao
       - year: "2013"
-        name: "Tanraj Sohal/Jason Cao/Davaa-Ochir Nyamdorj"
+        name: Tanraj Sohal/Jason Cao/Davaa-Ochir Nyamdorj
       - year: "2014"
-        name: "John Doknjas"
+        name: John Doknjas
       - year: "2015"
-        name: "Joshua Doknjas/John Doknjas"
+        name: Joshua Doknjas/John Doknjas
       - year: "2016"
-        name: "John Doknjas/Neil Doknjas/Brandon Zhu"
+        name: John Doknjas/Neil Doknjas/Brandon Zhu
       - year: "2017"
-        name: "Andrew Hemstapat, Joshua Doknjas"
+        name: Andrew Hemstapat, Joshua Doknjas
       - year: "2018"
-        name: "Joshua Doknjas"
+        name: Joshua Doknjas
       - year: "2019"
-        name: "Neil Doknjas"
+        name: Neil Doknjas
       - year: "2022"
-        name: "Aiden Zhou (winner on tie-break) and Kate Jiang"
+        name: Aiden Zhou (winner on tie-break) and Kate Jiang
       - year: "2023"
-        name: "Jingyun (Ryan) Yang"
+        name: Jingyun (Ryan) Yang
       - year: "2024"
-        name: "Jingyun (Ryan) Yang"
+        name: Jingyun (Ryan) Yang
       - year: "2025"
-        name: "Kate Jiang"
-  - title: "B.C. Senior Champions"
+        name: Kate Jiang
+  - title: B.C. Senior Champions
     entries:
       - year: "2013"
-        name: "Alonso Campos"
+        name: Alonso Campos
       - year: "2014"
-        name: "Jose Kagaon, Joe Soliven"
+        name: Jose Kagaon, Joe Soliven
       - year: "2015"
-        name: "Mayo Fuentebella"
+        name: Mayo Fuentebella
       - year: "2016"
-        name: "Daniel E. Salcedo, Joe Soliven, Duncan Haines (50+).   Leon Piasetski (65+)"
+        name: Daniel E. Salcedo, Joe Soliven, Duncan Haines (50+).   Leon Piasetski
+          (65+)
       - year: "2017"
-        name: "Brian McLaren, Valeria Gansvind"
+        name: Brian McLaren, Valeria Gansvind
       - year: "2018"
-        name: "Arpak Worya Mohammed Qanee, Brian McLaren, Mayo Fuentebella"
+        name: Arpak Worya Mohammed Qanee, Brian McLaren, Mayo Fuentebella
       - year: "2019"
-        name: "Arpak Worya Mohammed Qanee"
+        name: Arpak Worya Mohammed Qanee
       - year: "2020"
-        name: "Dale Hozhizaki (online)"
+        name: Dale Hozhizaki (online)
       - year: "2021"
-        name: "Dale Haessel (online)"
+        name: Dale Haessel (online)
       - year: "2022"
-        name: "Arpak Worya Mohammed Qanee, Mayo Fuentebella"
+        name: Arpak Worya Mohammed Qanee, Mayo Fuentebella
       - year: "2023"
-        name: "Arpak Worya and Reza Sardari"
+        name: Arpak Worya and Reza Sardari
       - year: "2024"
-        name: "Brian McLaren"
-  - title: "B.C. Senior Women's Champions"
+        name: Brian McLaren
+      - year: "2025"
+        name: Paul Ross
+  - title: B.C. Senior Women's Champions
     entries:
       - year: "2015"
-        name: "Victoria Jung - Doknjas"
+        name: Victoria Jung - Doknjas
       - year: "2016"
-        name: "Victoria Jung - Doknjas"
-  - title: "B.C. Cadet Champions"
+        name: Victoria Jung - Doknjas
+  - title: B.C. Cadet Champions
     entries:
       - year: "1980"
-        name: "Simon Lee"
+        name: Simon Lee
       - year: "1981"
-        name: "Greg Higgs/Randy Reiffer"
+        name: Greg Higgs/Randy Reiffer
       - year: "1982"
-        name: "Tyler Johnson"
+        name: Tyler Johnson
       - year: "1983"
-        name: "Tombert Chen"
+        name: Tombert Chen
       - year: "1984"
-        name: "Don Anthony/Tombert Chen"
+        name: Don Anthony/Tombert Chen
       - year: "1987"
-        name: "Howard Wu"
+        name: Howard Wu
       - year: "1988"
-        name: "Colin Fan"
+        name: Colin Fan
       - year: "1989"
-        name: "Howard Wu"
+        name: Howard Wu
       - year: "1990"
-        name: "Ian Martinovsky"
+        name: Ian Martinovsky
       - year: "1991"
-        name: "Andy Ito"
+        name: Andy Ito
       - year: "1992"
-        name: "Ian Martinovsky"
+        name: Ian Martinovsky
       - year: "1993"
-        name: "Andrew Ho"
+        name: Andrew Ho
       - year: "1994"
-        name: "Andrew Ho"
+        name: Andrew Ho
       - year: "1996"
-        name: "Alfred Pechisker/Samuel Wong"
+        name: Alfred Pechisker/Samuel Wong
       - year: "1997"
-        name: "Alfred Pechisker"
+        name: Alfred Pechisker
       - year: "1998"
-        name: "Kaleim Nathani"
-  - title: "BCCF Recognition Awards"
+        name: Kaleim Nathani
+  - title: BCCF Recognition Awards
     entries:
       - year: "2019"
-        name: "Lifetime Achievement Lyle Craver"
+        name: Lifetime Achievement Lyle Craver
       - year: "2021"
-        name: "Outstanding Volunteer Paul Leblanc"
+        name: Outstanding Volunteer Paul Leblanc
       - year: "2023"
-        name: "Outstanding Support of Chess Stephen Wright and Roger Patterson"
+        name: Outstanding Support of Chess Stephen Wright and Roger Patterson
       - year: "2024"
-        name: "Person of the Year Stephen Wright"
+        name: Person of the Year Stephen Wright
       - year: "2025"
-        name: "Player of the Year Karson Lu"
+        name: Player of the Year Karson Lu
       - year: "2025"
-        name: "Supporter of the Year Victoria Doknjas"
+        name: Supporter of the Year Victoria Doknjas
