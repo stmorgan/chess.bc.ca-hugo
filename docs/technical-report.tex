@@ -265,18 +265,33 @@ rather than loaded from a third-party CDN. This makes the admin site immune
 to CDN outages and means the CMS only changes when we deliberately replace
 that file with a newer release.
 
-\subsection{GitHub Actions --- the nightly rebuild}
+\subsection{GitHub Actions --- automation in the repository}
 
-News expiry and banner shuffling are decisions made \emph{at build time}. If
-nothing were ever rebuilt, an expired news item would sit on the home page
-forever, because time passing does not rebuild the site by itself. A small
-scheduled job, defined in
-\texttt{.github/workflows/nightly-rebuild.yml}, therefore fires every night
-at 2:17\,a.m.\ Pacific time and pings a Netlify \emph{build hook} (a secret
-URL that triggers a build). The hook URL is stored as a GitHub Actions
-secret named \texttt{NETLIFY\_BUILD\_HOOK}. This nightly build is what
-actually moves news into the archive on its expiry date and reshuffles the
-banners each day.
+GitHub Actions runs small automated jobs directly in the repository. Two
+are defined, both in \texttt{.github/workflows/}:
+
+\begin{description}
+  \item[Nightly rebuild] (\texttt{nightly-rebuild.yml}). News expiry and
+  banner shuffling are decisions made \emph{at build time}. If nothing were
+  ever rebuilt, an expired news item would sit on the home page forever,
+  because time passing does not rebuild the site by itself. This job
+  therefore fires every night at 2:17\,a.m.\ Pacific time and pings a
+  Netlify \emph{build hook} (a secret URL that triggers a build). The hook
+  URL is stored as a GitHub Actions secret named
+  \texttt{NETLIFY\_BUILD\_HOOK}. The nightly build is what actually moves
+  news into the archive on its expiry date and reshuffles the banners each
+  day.
+
+  \item[Bulletin announcements] (\texttt{announce-bulletin.yml}). When an
+  editor publishes a new bulletin, this job automatically posts the
+  matching news item --- ``Bulletin \#N Posted'', linking to the uploaded
+  PDF --- in the same format the site has always used, with the standard
+  two-week expiry. It reacts only to \emph{newly added} bulletin entries
+  (editing an existing bulletin never re-announces it) and skips any
+  bulletin that already has an announcement, so duplicates are impossible.
+  Publishing a bulletin in the CMS is therefore the only manual step; the
+  home-page announcement writes itself a minute or two later.
+\end{description}
 
 \subsection{External embeds}
 
@@ -326,6 +341,14 @@ notices the push, runs Hugo, and publishes the updated site. The item
 appears on the home page within a minute or two, and will move itself to
 the News Archive after its expiry date.
 
+\textbf{An editor publishes a bulletin.} The editor creates a \emph{New
+Bulletin} entry, uploading the PDF \emph{from within the entry's PDF field}
+(see Section~\ref{sec:ops}), and clicks \emph{Publish}. The commit lands on
+GitHub and Netlify deploys the updated bulletins index. The push also
+triggers the bulletin-announcement workflow, which commits a ``Bulletin
+\#N Posted'' news item; Netlify deploys again, and the announcement appears
+on the home page --- all without further editor action.
+
 \textbf{A developer changes a template.} The developer edits files locally,
 previews with \texttt{hugo server}, commits, and pushes to \texttt{main}.
 The same Netlify pipeline builds and publishes. If the build fails, the
@@ -363,7 +386,8 @@ banners reshuffle.
 \texttt{static/files/}, \texttt{static/AGM/}, \ldots & documents carried over from the old site \\
 \texttt{hugo.toml} & Hugo configuration and navigation menus \\
 \texttt{netlify.toml} & build command, Hugo version, all redirects \\
-\texttt{.github/workflows/} & the nightly rebuild workflow \\
+\texttt{.github/workflows/} & automation: nightly rebuild, bulletin \\
+ & \quad announcements (script in \texttt{.github/scripts/}) \\
 \texttt{docs/} & this report \\
 \bottomrule
 \end{tabular}
@@ -396,6 +420,19 @@ email, sets a password, and can immediately edit at \texttt{/admin/}. To
 revoke access, delete the user from the same screen. Registration is set to
 invite-only; do not change this, or anyone on the internet could sign
 themselves up as an editor.
+
+\subsection{Publishing a bulletin}
+
+In the CMS choose \emph{BC Bulletins} $\rightarrow$ \emph{New Bulletin},
+fill in the title, issue number (the index page sorts by it), and date,
+then click \emph{Choose a file} in the PDF field and upload \emph{from
+within that dialog}. Do not use the global \emph{Media} tab for bulletin
+PDFs: the Media tab stores files in the site's image-upload folder, while
+the bulletin entry's own file picker stores and looks in
+\texttt{static/bulletins/}. After \emph{Publish}, the matching news
+announcement is created automatically (Section~\ref{sec:stack}); if a
+particular bulletin should \emph{not} be announced, simply delete the
+auto-created news item afterwards --- it will not come back.
 
 \subsection{Local development}
 
@@ -465,6 +502,12 @@ required.
   \emph{Run workflow}, resumes it. Also confirm the
   \texttt{NETLIFY\_BUILD\_HOOK} secret still matches a valid build hook in
   Netlify.
+
+  \item[A new bulletin's news announcement did not appear.] Check the
+  repository's \emph{Actions} tab for the ``Announce new bulletin''
+  workflow run triggered by the bulletin's commit; its log explains what it
+  did or skipped. The commonest cause is that a news item announcing that
+  bulletin number already existed.
 
   \item[Something was deleted or broken by mistake.] Nothing is lost. Find
   the offending commit in the repository history on GitHub and revert it,
