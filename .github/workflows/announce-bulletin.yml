@@ -1,0 +1,38 @@
+# When an editor publishes a new bulletin in the CMS, automatically post a
+# matching "Bulletin #N Posted" news item (same format as the hand-written
+# ones). The news commit is pushed with the workflow token, which cannot
+# re-trigger workflows — and it touches only content/news/, so no loop is
+# possible either way. Netlify still sees the push and rebuilds the site.
+name: Announce new bulletin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/bulletins/*.md"
+
+permissions:
+  contents: write
+
+jobs:
+  create-news-item:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create news items for newly added bulletins
+        run: python3 .github/scripts/announce_bulletin.py "${{ github.event.before }}" "${{ github.sha }}"
+
+      - name: Commit and push
+        run: |
+          if [ -n "$(git status --porcelain content/news)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content/news
+            git commit -m "Content: announce new bulletin in News (automated)"
+            git push
+          else
+            echo "No announcements needed."
+          fi
