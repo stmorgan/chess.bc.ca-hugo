@@ -1,11 +1,11 @@
 ---
 type: clubs
-title: "Langley Chess Club"
-city: "Langley"
-meets: "Mondays, 7:00PM - 11:00PM Brookswood Senior Center 19899 36th Ave."
-contact: "President: Brian Davidson, eightbeer_shakespeare@outlook.com 604-626-2044 (cell); TD: Paul MacDonell, email: first and last name (no spaces) at yahoo dot ca"
-website: "http://www.langleychess.com/"
-last_update: 2024-10-01
+title: Langley Chess Club
+city: Langley
+meets: "Mondays, 7:00PM - 11:00PM "
+location: Brookswood Senior Center 19899 36th Ave. All equipment provided.
+contact: "President: Brian Davidson,  604-626-2044 (cell); TD: James Kerry"
+email: eightbeer_shakespeare@outlook.com
+website: http://www.langleychess.com/
+last_update: 2026-07-31
 ---
-
-Details: All equipment provided.
