@@ -8,6 +8,6 @@ location: "11180 Bridgeport Rd #110, Richmond, BC V6X 1T2"
 contact: " +1-778-681-0201, WhatsApp:+1-778-681-0201"
 email: richmondchesschampions@gmail.com
 website: https://www.richmondchesschampions.com
-image: /images/uploads/rcc-logo.png
+image: /images/uploads/rcc-logo.jpg
 last_update: 2026-07-31
 ---
