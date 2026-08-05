@@ -7,6 +7,7 @@ location: Studio 2880 Feature Gallery & Gift Shop, 2880 15th Ave, Jack Bryant Ro
 contact: ""
 email: chessclubpg@gmail.com
 website: https://facebook.com/groups/pgchessclub/
+image: /images/uploads/prince-george-chess-club-logo-master-resize.jpg
 last_update: 2026-08-04
 ---
 No meetings this summer.
