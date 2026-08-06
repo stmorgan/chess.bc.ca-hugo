@@ -9,6 +9,6 @@ email: info@fraservalleychess.com
 website: https://fraservalleychess.com/club/
 last_update: 2026-07-31
 ---
-Details:FREE for all Zebra Robotics Langley & FVCA students. Last Thursday of each month features a 9-rounds unratedblitz.
+FREE for all Zebra Robotics Langley & FVCA students. Last Thursday of each month features a 9-rounds unrated blitz.
 
-\*Valid monthly paid club membership required (walk-insaccepted, registration accepted online or in-person).
+\*Valid monthly paid club membership required (walk-ins accepted, registration accepted online or in-person).
