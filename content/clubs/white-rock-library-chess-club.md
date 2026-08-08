@@ -1,12 +1,11 @@
 ---
 type: clubs
-title: "White Rock Library Chess Club"
-city: "White Rock"
-meets: "Every Thursdays and Saturdays 2:00-5:00 PM regular playing time."
-location: "White Rock Library, 15342 Buena Vista Ave, White Rock, BC.  Ph. 604-541-2201"
-last_update: 2025-01-01
+title: White Rock Library Chess Club
+city: White Rock
+meets: Every Thursday, 3:00-4:30pm librarian led event.  Every Saturday,
+  3:00-4:30pm casual, drop-in format.
+location: White Rock Library, 15342 Buena Vista Ave, White Rock, BC
+contact: Tal Wieczorek (Thursday coordinator), 604-541-2201
+email: twieczorek@fvrl.bc.ca
+last_update: 2026-08-08
 ---
-
-Everyone is welcome to play for F-R-E-E.  There is some general assistance available.
-
-Adults and young students are all welcome.
