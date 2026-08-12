@@ -1,26 +1,21 @@
 ---
 type: clubs
-title: "Coquitlam Library Chess Club"
-city: "Coquitlam"
-meets: "Saturdays from 2pm to 3:30pm on the following dates in 2023:  Jan. 28, Feb. 25, Mar. 4, Apr. 22, May 6 and June 24,"
-contact: "Librarian Shirley Chan at schan@coqlibrary.ca"
-email: "schan@coqlibrary.ca"
-website: "https://coqlibrary.ca"
-last_update: 2023-05-01
+title: Coquitlam Library Chess Club
+city: Coquitlam
+meets: Drop-in event.  Chess sets provided.  Open to all ages and all skill
+  level. Free.  Check website for current schedule.
+location: Poirier Branch, 575 Poirier Street,  Nancy Bennett Room
+contact: Librarian Shirley Chan
+email: schan@coqlibrary.ca
+website: https://coquitlam.libnet.info/events?
+last_update: 2026-08-12
 ---
+Saturday, August 15 2:00 - 3:30 pm.
 
-[July 15](https://coquitlam.libnet.info/event/8527186),
+ Here is the tentative schedule for Oct to Dec sessions (subject to change):
 
-[July 29](https://coquitlam.libnet.info/event/8527187),
+\-Sat, October 24, 2:00-3:30 pm at Poirier Library
 
-[Aug 5](https://coquitlam.libnet.info/event/8527188),
+\-Sat, November 14, 2:00-3:30 pm at Poirier Library
 
-[Sept 16](https://coquitlam.libnet.info/event/8527189)
-
-Where:  Coquitlam Library Poirier Branch Nancy Bennett Room, 575 Poirier St., Coquitlam
-
-Teens: [https://www.coqlibrary.ca/programs/teens](https://www.coqlibrary.ca/programs/teens)
-
-Adults: [https://www.coqlibrary.ca/programs/adults](https://www.coqlibrary.ca/programs/adults)
-
-Details:  General info:  Chess sets provided.  Open to all ages and all skill level. Free.
+\-Sat, December 5,  2:00-3:30 pm at Poirier Library
