@@ -96,8 +96,8 @@ pageRef = "/arbiters"
 weight = 70
 
 [[menus.org]]
-name = "Life Members"
-pageRef = "/life-members"
+name = "Donate to the BCCF"
+pageRef = "/donate"
 weight = 80
 
 [[menus.org]]

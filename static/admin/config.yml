@@ -243,6 +243,8 @@ collections:
       - { name: executive, label: Executive, file: content/executive.md, fields: *page_fields }
       - { name: agm, label: AGM, file: content/agm.md, fields: *page_fields }
       - { name: policies, label: Policies, file: content/policies.md, fields: *page_fields }
+      - { name: donate, label: Donate to the BCCF, file: content/donate.md, fields: *page_fields }
+      - { name: how_to_donate, label: How to Donate, file: content/how-to-donate.md, fields: *page_fields }
       - { name: life_members, label: Life Members, file: content/life-members.md, fields: *page_fields }
       - { name: games, label: Game Databases, file: content/games.md, fields: *page_fields }
       - { name: event_proposal, label: Event Proposal, file: content/event-proposal.md, fields: *page_fields }
