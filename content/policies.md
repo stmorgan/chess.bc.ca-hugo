@@ -7,6 +7,8 @@ motions and policy that have enduring effect for reference purposes.
 
 ## Policies and Motions passed by the Executive
 
+**August 2026** The BCCF Safe Play Code of Conduct was announced by the President in consultation with the Executive – [BCCF Safe Play Code of Conduct](/Policy/BCCF-Code-of-Conduct-with-Regard-toSafe-Play.pdf)
+
 **February 2026** At an Executive Meeting on 13 February, 2026 it was decided that when more than one proposal is submitted for a BCCF sanctioned event a committee will be formed comprised of all executives not affiliated with any of the organizations submitting proposals.  The Tournament Coordinator or other member of the Executive will oversee the selection process and make a recommendation to the President regarding which members of the Executive are excluded from the committee.  Only members of the Event Proposal Committee will discuss and vote on the bids.  If the President or Tournament Coordinator are affiliated with one of the bids then one or more other members of the Executive will oversee the process.
 
 At that meeting it was recognized that because of the growth of BCCF membership, the BCCF has been granted an increasingly large number of CFC voting members.  Therefore it was resolved that in future CFC voting members will not automatically become BCCF members at large.  It was also resolved to gradually reduce the number of members at large through attrition until a reasonable number is reached that is commensurate with the need for volunteers and representation.
