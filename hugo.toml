@@ -45,6 +45,11 @@ pageRef = "/instruction"
 weight = 40
 
 [[menus.main]]
+name = "Parent's Handbook"
+url = "/files/bc-chess-parents-handbook.pdf"
+weight = 45
+
+[[menus.main]]
 name = "Bulletins"
 pageRef = "/bulletins"
 weight = 50
