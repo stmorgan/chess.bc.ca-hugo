@@ -1,0 +1,1445 @@
+% ============================================================================
+%  A Parent's Handbook to Competitive Chess in British Columbia
+%  Compile with: pdflatex (run twice for table of contents)
+% ============================================================================
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{microtype}
+\usepackage[margin=0.95in,headheight=14pt]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{boardgreen}{RGB}{34,85,68}
+\definecolor{lightbg}{RGB}{242,244,242}
+
+\hypersetup{
+  pdftitle={A Parent's Handbook to Competitive Chess in British Columbia},
+  pdfsubject={Youth chess tournaments in BC},
+  colorlinks=false
+}
+
+\titleformat{\section}{\Large\bfseries\color{boardgreen}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.2ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+\setlist[itemize]{itemsep=2pt,topsep=4pt,leftmargin=1.4em}
+\setlist[enumerate]{itemsep=2pt,topsep=4pt,leftmargin=1.6em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape A Parent's Handbook to Competitive Chess in BC}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newtcolorbox{keybox}[1]{
+  colback=lightbg, colframe=boardgreen, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\bfseries, title={#1}, breakable
+}
+
+\newcommand{\term}[1]{\textbf{#1}}
+
+\begin{document}
+
+% ---------------------------------------------------------------- title page
+\begin{titlepage}
+\centering
+\vspace*{2.5cm}
+{\Huge\bfseries\color{boardgreen} A Parent's Handbook to\\[0.3em] Competitive Chess\\[0.3em] in British Columbia\par}
+\vspace{1.5cm}
+{\Large What to expect, how it works, and how not to get your child disqualified\par}
+\vspace{2.5cm}
+{\large Version 1.7\par}
+{\large \today\par}
+\vfill
+\begin{minipage}{0.85\textwidth}
+\small
+\textbf{A note on accuracy.} Fees, dates, venues, and organizers change every
+season. Everything in this handbook was checked against public sources in
+July 2026, but before you register for anything, confirm the details on the
+organizer's own website. Section~\ref{sec:directory} lists where to look.
+This handbook is not affiliated with the Chess Federation of Canada, or any club or academy named in it.
+\end{minipage}
+\vspace{1.5cm}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ============================================================================
+\section{How to use this handbook}
+
+Your child has started playing chess seriously, and you have discovered that
+competitive chess comes with an entire culture that nobody explains to you.
+There is a rulebook, but it is written for arbiters. There are behavioral norms, but they
+are enforced by silent disapproval. And there are a handful of things a
+well-meaning parent can do --- standing in the wrong place, taking a photo at
+the wrong moment, asking a helpful question --- that will get their child
+penalised or disqualified.
+
+This handbook exists to close that gap. It is written for parents in British
+Columbia whose children are somewhere between their first scholastic
+tournament and the provincial championships.
+
+You do not need to read it front to back. Three suggestions:
+
+\begin{itemize}
+  \item \textbf{Before your first tournament,} read Sections~\ref{sec:admin}
+        (registration), \ref{sec:etiquette} (etiquette), and
+        \ref{sec:parents} (rules that apply to parents), plus the checklist in
+        Appendix~\ref{app:checklist}.
+  \item \textbf{After two or three tournaments,} read
+        Sections~\ref{sec:ratings} (ratings) and \ref{sec:pairings} (pairings
+        and tiebreaks). They will answer the questions your child has started
+        asking.
+  \item \textbf{Keep Appendix~\ref{app:fridge} on the fridge.} It is the
+        one-page version.
+\end{itemize}
+
+A note on terminology: this handbook uses \term{arbiter} and \term{tournament
+director} (TD) more or less interchangeably, because BC organizers do. Strictly,
+an arbiter enforces the rules of play and a TD runs the event; at most junior
+tournaments the same person does both.
+
+% ============================================================================
+\section{The landscape: who runs what}
+
+\subsection{Three organizations, three jobs}
+
+\begin{description}[leftmargin=0pt,style=nextline,itemsep=6pt]
+  \item[Chess Federation of Canada (CFC)] The national body. It issues the
+        \term{CFC ID} that identifies your child in every rated event in
+        Canada, maintains the national rating list, and runs national
+        championships. Website: \url{https://www.chess.ca}. 
+  \item[British Columbia Chess Federation (BCCF)] The provincial body. It
+        sanctions provincial championships, publishes the BC events calendar
+        and club list, and issues the \emph{BC Bulletin}. Website:
+        \url{https://chess.bc.ca}. There is a Facebook page (Chess in BC) that is quite informative.
+  \item[FIDE] The international federation. It writes the Laws of Chess that
+        BC tournaments play under, maintains international ratings, and awards
+        titles. Most junior events in BC are \emph{not} FIDE-rated; a few of
+        the larger opens are. Website: \url{https://www.fide.com}.
+
+
+\item[And a fourth body] 
+The \term{Chess'n Math Association (CMA)}, \url{https://chess-math.org/}, is a non-profit founded in 1985 that
+calls itself Canada's National Scholastic Chess Organization. It sits outside
+the CFC--BCCF--FIDE structure rather than under it: it runs its own K--12
+tournaments, rates them on its own scholastic rating system --- which is not a
+CFC rating and does not convert to one --- and sells chess equipment. In BC its
+day-to-day footprint is small, because our provincial events are run by local
+organizers rather than by the CMA. You will meet it at one point: the
+\term{Canadian Chess Challenge}, the national grade championship it has run
+since 1989. That event is invitation-only, reached through your provincial
+coordinator rather than by registering yourself, and the tournament itself is
+free --- the cost of nationals is getting there, not getting in.
+
+\end{description}
+
+
+\paragraph{} Note the slightly confusing membership arrangement in BC: the BCCF no longer
+sells individual memberships. Instead, organizers of CFC-rated tournaments held
+in BC remit a small per-player fee (currently \$1.50 for one-day events and \$3
+for multi-day events) on your behalf. Practically speaking, you never buy a
+BCCF membership --- you just play, and it is handled.
+
+\subsection{Clubs and academies}
+
+Below the federations sit the organizations that actually run the tournaments
+your child will play in. In BC these are a mix of volunteer-run clubs and
+commercial academies, and the same organization frequently does both coaching
+and event organizing. As of 2026 the most active in the Lower Mainland include
+the Vancouver Chess School (Kitsilano), Fraser Valley Chess Academy (Langley,
+with locations spreading across the region), Penny Chess Club (Burnaby), Juniors to Masters Chess Academy (Langley), 
+Richmond Chess Champions, Langley Chess Club, and Chess2Inspire. On the Island,
+the Victoria Junior Chess Society and Victoria Chess are the main organizers.
+The BC Junior Chess Association (BCJCA) is a student-run non-profit that runs
+K--12 events and the BC High School Chess Championship.
+
+The BCCF maintains the authoritative list at \url{https://chess.bc.ca/clubs/}
+and \url{https://chess.bc.ca/events/}. Because organizers come and go, treat
+any list --- including this one --- as a starting point rather than gospel.
+
+\begin{keybox}{The practical consequence}
+There is no single BC chess authority you register with once. You will end up
+dealing with three or four different organizers, each with their own website,
+registration system, refund policy, and quirks. Budget some administrative
+patience.
+\end{keybox}
+
+\subsection{Two parallel pathways}
+\label{sec:pathways}
+
+BC junior chess has two competitive ladders that run alongside each other and
+confuse nearly every new parent. They are organized on different principles.
+
+\paragraph{The age-based pathway (CYCC).} Sections are defined by birth year:
+U8, U10, U12, U14, U16, U18, usually split into Open and Girls sections. To
+play in the \term{Canadian Youth Chess Championship} (CYCC), your child must
+first \emph{qualify} by scoring 50\% or more in a designated ``CYCC Qualifier''
+event, playing at least three games. Many BC junior tournaments are qualifiers;
+the flagship one is the \term{BC Youth Chess Championship} (BCYCC), the
+officially sanctioned provincial qualifier, typically held in March. The 2026
+edition was hosted by Fraser Valley Chess Academy at SFU Burnaby. From the CYCC,
+top finishers earn the right to represent Canada at the World Cadet (U8--U12)
+and World Youth (U14--U18) championships.
+
+One trap worth knowing: if your child qualifies in a particular section, that
+is the \emph{only} section they may enter at the CYCC. A nine-year-old who
+plays up into U14 and qualifies there has locked themselves into U14 at
+nationals.
+
+\paragraph{The grade-based pathway (Chess Challenge).} Sections are defined by
+school grade, K through 12. Regional qualifiers run through the fall and
+winter, feeding into the \term{BC Chess Challenge} provincial championship in
+April. The twelve grade winners form Team BC and travel to the
+Canadian Chess Challenge, the national scholastic championship held on
+the Victoria Day weekend, where each province is represented by one player per
+grade. (Team BC won it in 2023, ending a 34-year drought --- expect to hear
+about this.) The regionals have historically been run by the Vancouver Chess
+School at UBC, with the Victoria Junior Chess Society hosting the Island
+regional.
+
+\paragraph{Which should we do?} Both, if you have the appetite. They are
+scheduled so as not to collide badly, and each teaches something different: the
+age-based ladder puts your child against a wider spread of strength, while the
+grade-based one is the more direct route to a national team. If you only have
+bandwidth for one, start with whichever your child's club is already plugged
+into.
+
+\subsection{The rhythm of a BC chess year}
+
+Roughly, and with the strong caveat that dates move:
+
+\begin{longtable}{@{}p{0.22\textwidth}p{0.72\textwidth}@{}}
+\toprule
+\textbf{Period} & \textbf{What is happening} \\
+\midrule
+\endhead
+September--November & Clubs restart after summer. Chess Challenge regional
+qualifiers begin. Weekly rapid events resume. Langley Open (early September). Thanksgiving Open, BC Closed, BC Women's Championships (Thanksgiving weekend). \\
+December--January & Richmond International Chess Festival over the Christmas
+break. BC Chess Cup and other winter youth events. Winter CYCC qualifiers. \\
+February--March & BC Open (Family Day weekend), CYCC qualifier season peaks. BC Youth Chess Championship
+(BCYCC), typically March. \\
+April & BC Chess Challenge provincial championship. Grand Pacific Open in
+Victoria over Easter. \\
+May & Paul Keres Memorial --- BC's historic open, held in the Vancouver area
+every year since 1976. Canadian Chess Challenge nationals, Victoria Day weekend. \\
+June--July & CYCC nationals (July). Summer camps. \\
+August & Quiet month; club play continues. \\
+Autumn (varies) & BC Closed, BC Women's Championship, and other BCCF-sanctioned
+provincial titles. \\
+\bottomrule
+\end{longtable}
+
+% ============================================================================
+\section{Getting registered}
+\label{sec:admin}
+
+\subsection{The CFC ID}
+
+Before your child can play in a rated tournament, they need a CFC ID. Get this
+sorted \emph{well} before the registration deadline --- organizers routinely
+require the ID at registration, and ``we'll do it at the door'' is how children
+end up not playing.
+
+Create one at \url{https://www.chess.ca/en/players/membership-join/}. The CFC
+uses a platform called GoMembership; keep the login somewhere you will find it
+again in a year.
+
+Tournament organizers sometimes do this for you after obtaining your child’s birth date
+and city of residence.
+
+\subsection{Membership versus tournament fee}
+
+An ID is not the same as a membership. For CFC-rated play you need one of:
+
+\begin{itemize}
+  \item an \term{annual membership} (good for 12 months), or
+  \item a \term{single-tournament fee}, good for one event only.
+\end{itemize}
+
+Fees depend on your province of residence, not on where the tournament is held.
+BC rates as of July 2026:
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Type (BC resident)} & \textbf{Adult} & \textbf{Junior} \\
+\midrule
+Annual membership & \$38.00 & \$25.00 \\
+Family annual (additional member) & \$19.00 & \$12.50 \\
+Single tournament --- Regular time control & \$16.00 & \$8.00 \\
+Single tournament --- Quick time control & \$8.00 & \$4.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A ``Junior'' is defined by birth year and the cutoff shifts annually; check the
+CFC fee page. Juniors are defined as under age 20 as of January 1 st of the current year. Families with at least one full-price adult member can add
+children at the discounted family rate, but only when purchased together --- so
+if you or your spouse also plans to play, buy everything in one transaction.
+
+\begin{keybox}{The all-junior exception}
+For tournaments where every participant is a junior --- which includes most
+CYCC qualifiers --- a \emph{paid} CFC membership is not required. Your child
+still needs a CFC ID. This catches people out in both directions: some pay when
+they need not, others assume the exception applies to an open event where it
+does not.
+\end{keybox}
+
+\subsection{Choosing an event and a section}
+
+For a first tournament, look for a one-day rapid event run by a local club. The
+commitment is a Saturday or Sunday rather than a weekend, the games are short enough that
+a seven-year-old can tolerate five of them, and the stakes are low.
+
+Sections are structured one of three ways:
+
+\begin{itemize}
+  \item \textbf{By age} (U8, U10, U12\ldots) --- typical of CYCC qualifiers.
+  \item \textbf{By grade} (K--12) --- the Chess Challenge series.
+  \item \textbf{By rating} (Open, U2000, U1600, U1200\ldots) --- typical of
+        adult and open events.
+\end{itemize}
+
+In rating-based events, your child normally plays in the section matching their
+rating. Many organizers allow \term{playing up} into a higher section, sometimes
+for a small fee. Playing up is good for development and bad for prize-winning;
+that is the trade. Unrated players are usually eligible to enter any section but
+sometimes restricted from prizes outside the Open.
+
+Organizers generally reserve the right to move a player into the section their
+actual rating warrants. Do not attempt to game this.
+
+\subsection{Deadlines, fees, and refunds}
+
+Expect an early-bird price, a regular price, and sometimes a late or on-site
+``rush'' price. The spread is typically \$10--\$20. Registration closes several
+days before the event so the organizer can build the pairings.
+
+Refund policies are strict and non-negotiable. A typical BC policy: full refund
+minus a \$25 processing fee up to a stated deadline, then partial or nothing;
+no refunds for no-shows or withdrawals. Some organizers offer store credit
+toward a future event instead. \emph{Read the policy before you pay}, and put
+the refund deadline in your calendar alongside the event.
+
+\subsection{Byes}
+
+A \term{bye} is a round your child does not play. There are two kinds:
+
+\begin{itemize}
+  \item A \term{half-point bye} is requested in advance and scores 0.5. It
+        exists so a family can arrive late, leave early, or attend a birthday
+        party without withdrawing.
+  \item A \term{zero-point bye} scores 0 and is what you get if you request a
+        bye where half-point byes are not allowed.
+  \item A \term{full-point bye} is not requested --- it is assigned by the
+        pairing system when the section has an odd number of players. It scores
+        1. Someone gets one most rounds; it is luck, not favouritism.
+\end{itemize}
+
+Typical BC rules: at most two half-point byes per event, none in the final
+round (or final two rounds of a long blitz), and requests must be submitted
+before a stated deadline or at minimum half an hour before the round. Ask for
+byes \emph{in advance and in writing}. Do not simply not show up --- an
+unexplained absence is treated as a forfeit and often as a withdrawal from the
+whole tournament.
+
+\subsection{What to bring}
+
+Most BC junior events supply boards, pieces, and clocks. Confirm this; smaller
+club events sometimes ask you to bring a set.
+
+Bring anyway: a pen (two --- they vanish), a refillable closed-top water bottle,
+snacks that can be eaten outside the playing hall, a sweater (gyms and ballrooms
+are cold), a book or puzzle for between rounds, and any medication. Do not
+bring anything that beeps. A full checklist is in
+Appendix~\ref{app:checklist}.
+
+% ============================================================================
+\section{Ratings}
+\label{sec:ratings}
+
+\subsection{What a rating is}
+
+A rating is a number that predicts results. If your child is rated 1200 and
+plays someone rated 1200, the system expects them to score 50\%. A 200-point
+gap predicts roughly 75\% for the higher-rated player. The rating goes up when
+results beat the prediction and down when they fall short. That is the entire
+concept. The CFC rating list is updated every week,
+usually on Thursday or Friday and includes the results of tournaments held during the
+previous week.
+
+It is not a measure of intelligence, effort, or worth, and it is not
+comparable across systems. It is a prediction, and predictions get revised.
+
+\subsection{Regular versus Quick}
+
+The CFC maintains two separate ratings for every player:
+
+\begin{itemize}
+  \item \term{Regular} (also called Standard or Classical), for events giving
+        each player 60 minutes or more for a 60-move game.
+  \item \term{Quick} (also called Active or Rapid), for anything faster.
+\end{itemize}
+
+The arithmetic is the same; the pools are separate. A child can have a Regular
+rating of 900 and a Quick rating of 1300, which usually means they have played
+far more rapid events than classical ones, or they just might be better at Rapid chess.
+
+The 60-minute threshold counts increment: a time control of 50 minutes plus a
+10-second increment works out to 50 + 60$\times$10\,s = 60 minutes for a 60-move
+game, so it is Regular-rated. This is why so many BC junior ``classical'' events
+use exactly 50+10 --- it is the shortest control that still counts as Regular.
+
+\subsection{Provisional ratings}
+
+A new player's first 25 rated games produce a \term{provisional} rating,
+calculated differently and displayed in brackets or with a note. Provisional
+ratings swing wildly, especially over the first ten to fifteen games. A child
+whose provisional rating drops 200 points after a bad weekend has not got worse;
+the system is still working out where they belong.
+
+Two consequences worth knowing:
+
+\begin{itemize}
+  \item Provisional ratings systematically \emph{lag} for fast-improving
+        juniors. A child who is genuinely improving month to month will spend
+        much of their first year underrated. This is normal and it self-corrects.
+  \item Because of this, junior ratings are noisy in a way adult ratings are not.
+        Beating a 1400-rated ten-year-old is a different proposition from
+        beating a 1400-rated adult who has been 1400 for a decade.
+\end{itemize}
+
+\subsection{FIDE ratings}
+
+FIDE ratings are separate again, earned only in FIDE-rated events. In BC these
+are mostly the larger opens --- the Keres Memorial, the Richmond International
+Chess Festival, and similar. Your child will need a FIDE ID, which the organizer
+of their first FIDE-rated event typically arranges through the CFC.
+
+FIDE ratings run on a floor (currently 1400 at the time of writing) and on a
+smaller, stronger pool, so a FIDE rating is usually lower than the same player's
+CFC rating. Do not read anything into the difference.
+
+\subsection{Online ratings}
+
+A chess.com or Lichess rating is not a CFC rating, is not a FIDE rating, and is
+not convertible to either. The pools are different, the time controls are
+different, and the opposition is different. Children arrive at their first
+tournament with a 1600 online rating and lose to a 900, and this is not a
+mystery --- it is what happens when a game gets slow, silent, physical, and
+consequential.
+
+Online play is genuinely useful for pattern recognition and for volume. Treat
+the number as noise.
+
+\subsection{Talking to your child about ratings}
+
+Ratings are the single most reliable source of unhappiness in junior chess.
+A few things that help:
+
+\begin{itemize}
+  \item Never ask ``what's your rating now?'' as a greeting.
+  \item Do the arithmetic \emph{with} them once --- show them how the
+        prediction works --- and then stop doing it.
+  \item Set goals on process (play the full time, write down every move, check
+        for opponent threats before moving) rather than on the number.
+  \item If your child is checking the CFC rating page repeatedly in the weeks
+        after an event, that is a signal worth gently interrupting.
+\end{itemize}
+
+% ============================================================================
+\section{Pairings, standings, and tiebreaks}
+\label{sec:pairings}
+
+\subsection{The Swiss system}
+
+Almost every tournament your child plays will use a \term{Swiss} system. Nobody
+is eliminated; everyone plays every round. The pairing rule is simple: in each
+round, players are paired against others with the same score, whom they have
+not already played.
+
+So the field sorts itself. After round one there are winners and losers; in
+round two winners play winners and losers play losers. By round four or five,
+your child is almost certainly playing someone of very similar strength, which
+is the point of the system.
+
+Within a score group, the pairing software splits the group in half by rating
+and pairs the top half against the bottom half. This means an early-round game
+against a much stronger opponent is normal, not a mistake.
+
+Parents are encouraged to Google about how computer pairing works; and if not understood, feel free to ask the TD for explanation. See, for example, \url{https://www.youtube.com/watch?v=zGoPwpxmV4E&t=255s}
+
+\subsection{Colours}
+
+The software balances colours over the event --- roughly alternating, and
+avoiding giving anyone three of the same colour in a row. Nobody chooses. If
+your child ends up with one more White than Black, that is the arithmetic of an
+odd number of rounds.
+
+\subsection{Round one is often lopsided}
+
+In round one everybody has zero points, so the software pairs top-half against
+bottom-half by rating. In a section of 40 players, the 1st seed plays the 21st.
+This is the single most common source of first-tournament distress: a child
+plays their very first rated game against the strongest opponent they will face
+all weekend, loses in twenty moves, and concludes they are terrible.
+
+Warn them beforehand. Round one means nothing; the tournament starts at round
+two, when the Swiss has found its level.
+
+\subsection{Where to find pairings}
+
+Pairings are posted before each round, on paper near the playing hall and
+increasingly online. BC organizers currently use several platforms ---
+ChessRoster, SwissSys, and chess-results.com are all in circulation. The
+organizer's event page will say which.
+
+Teach your child to read the pairing sheet themselves: board number, colour,
+opponent's name. It takes five minutes to learn and it is the beginning of them
+owning their own tournament.
+
+\subsection{Standings and tiebreaks}
+
+At the end, players are ranked by score. Ties are broken by mathematical
+tiebreak systems, which are the second most common source of parental
+bewilderment. The usual ones:
+
+\begin{description}[leftmargin=0pt,style=nextline,itemsep=4pt]
+  \item[Direct encounter] If the tied players played each other, the winner of
+        that game places higher.
+  \item[Buchholz] The sum of the opponents' scores. Rewards a harder schedule.
+  \item[Sonneborn--Berger] Similar, but weighted by whether you beat or drew
+        those opponents.
+  \item[Cumulative] Sum of running score after each round. Rewards scoring
+        early.
+  \item[Average rating of opponents] Self-explanatory.
+\end{description}
+
+The event's own announcement specifies which are used and in what order. Your
+child can score 4.5/6 and finish fourth while another player with 4.5/6 finishes
+second, entirely legitimately, because their opponents were stronger. Cash
+prizes are usually split equally among tied players; tiebreaks are used to
+allocate trophies and travel subsidies.
+
+\begin{keybox}{A warning about the CFC crosstable}
+The order players appear in on the CFC's website after an event is \emph{not}
+the tournament's final standings. The CFC does not apply an event's custom
+tiebreaks; its listing may be by performance rating or effectively arbitrary.
+The organizer's posted standings are the official ones.
+\end{keybox}
+
+% ============================================================================
+\section{Time controls}
+
+\subsection{Understanding time and increments}
+
+A time control like \textbf{90+30} means each player gets 90 minutes for the
+whole game, plus 30 seconds added to their clock after every move they make.
+\textbf{G/60} or \textbf{60/0} means 60 minutes each with no increment. A
+two-stage control like \textbf{40/90, SD/30 +30} means 90 minutes for the first
+40 moves, then 30 more minutes to finish, with a 30-second increment throughout;
+these appear mainly in strong adult events.
+
+\term{Increment} adds time after each move --- you can never quite run out while
+you are still moving. \term{Delay} (Bronstein or simple delay) waits a few
+seconds before your clock starts running, but does not accumulate. Increment is
+the norm in BC. The practical difference for a child: with increment, a
+completely lost position can still be defended for a long time; with no
+increment, games end on the flag.
+
+\subsection{The three categories}
+
+FIDE defines these by how much time a player has for a 60-move game (base time
+plus 60 increments):
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Category} & \textbf{Time for 60 moves} & \textbf{Typical BC examples} \\
+\midrule
+Standard (classical) & 60 minutes or more & 90+30, 60+30, 50+10 \\
+Rapid & More than 10, under 60 minutes & 25+5, 25+10, 15+10 \\
+Blitz & 10 minutes or less & 5+0, 3+2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Note that 50+10 --- extremely common in BC junior events --- is
+\emph{classical}, not rapid, despite feeling short. Its games routinely run two
+hours.
+
+\subsection{What each format means for your day}
+
+\begin{description}[leftmargin=0pt,style=nextline,itemsep=6pt]
+  \item[Classical] Two or three rounds a day, each round scheduled at
+        three to four hours. A typical weekend event runs 10\,am to 7\,pm both days.
+        Games are long, mentally exhausting, and require notation. This is the
+        format that builds players.
+  \item[Rapid] Five or six rounds in a single day, often 9:30\,am to 4\,pm.
+        Rounds start ``ASAP'' once the previous one finishes, so the schedule
+        drifts earlier. Notation is usually not required. This is the format
+        most junior events use.
+  \item[Blitz] Often a side event in the evening, seven to nine rounds in an
+        hour or two. Chaotic, loud by chess standards, and enormous fun. No
+        notation.
+\end{description}
+
+\begin{keybox}{Do not underestimate the strain of a day of classical chess.}
+A parent whose only experience is a one-day rapid is unprepared for a
+six-round classical weekend. That is potentially twelve hours of concentrated
+play across two to three days for a ten-year-old. Sleep and food matter more than
+opening preparation. See Section~\ref{sec:emotional}.
+\end{keybox}
+
+% ============================================================================
+\section{The rules your child actually needs}
+
+The FIDE Laws of Chess run to dozens of pages. Here is the subset that comes up.
+
+\subsection{Touch-move}
+
+If your child deliberately touches one of their own pieces, they must move it if
+there is a legal move. If they touch an opponent's piece, they must capture it
+if they legally can. Once they release a piece on a square, the move is made ---
+it cannot be taken back, even if their hand hovers, even if it is a catastrophic
+blunder, even if they are six years old and crying.
+
+To adjust a piece that is sitting crooked without committing to move it, the
+player says \textbf{``I adjust''} or the French \textbf{``j'adoube''}
+\emph{before} touching it. Teach your child this phrase; it is one of the few
+things anyone is allowed to say at the board.
+
+Touch-move is the rule that generates the most tears at a first tournament, and
+also the rule that teaches the most. Do not soften it. Do not argue it.
+
+\subsection{The clock}
+
+\begin{itemize}
+  \item Make your move, then press the clock --- \textbf{with the same hand}
+        that moved the piece. Two-handed play is an illegal move.
+  \item Do not press the clock before moving, and do not press it holding a
+        piece.
+  \item If a player's time runs out (their ``flag falls''), they lose, provided
+        the opponent has enough material to deliver mate. If not, it is a draw.
+  \item The opponent must normally \emph{claim} a flag fall; the
+        arbiter will often call it too.
+  \item If something needs to be sorted out, either player may pause the clock
+        and raise a hand for the arbiter.
+\end{itemize}
+
+\subsection{Illegal moves}
+
+In standard (classical) play: the position is restored, the offending player
+must make a legal move with the touched piece if possible, and the opponent
+gets two extra minutes. A \emph{second} illegal move by the same player loses
+the game. In rapid and blitz the extra time is one minute, and the second
+illegal move again loses.
+
+The correct response to an opponent's illegal move is to stop the clock and
+raise a hand --- not to argue, and not to reset the pieces oneself.
+
+\subsection{Draws and claims}
+
+A game is drawn by agreement, stalemate, insufficient material, threefold
+repetition, or the fifty-move rule. The critical point for a junior:
+\textbf{repetition and fifty-move draws must be claimed}. They do not happen
+automatically. A child who says ``that position happened three times'' after
+losing on time has no case; they needed to stop the clock and claim it at the
+time, before making their move.
+
+Draw offers have their own etiquette: make the move, \emph{then} offer the draw,
+\emph{then} press the clock. Offering repeatedly is a form of harassment and
+arbiters will treat it as such.
+
+Some junior events prohibit draw offers before a certain move number to stop
+short non-games. Read the event rules.
+
+\subsection{Promotion}
+
+When a pawn reaches the eighth rank it must be replaced immediately by a queen,
+rook, bishop, or knight of the same colour. If no second queen is available, the
+player stops the clock and asks the arbiter --- an upside-down rook is
+\emph{not} a queen and will be ruled as a rook. Under-promotion to a knight is
+legal and occasionally winning.
+
+\subsection{Resigning}
+
+A player resigns by stopping the clock, offering a handshake, and saying ``I
+resign,'' or by tipping over their king. There is no shame in it and it is
+considered good manners in a hopeless position at a slow time control.
+
+That said: children should be encouraged to play on longer than adults would.
+Junior opponents blunder back. Some of the best lessons in a young player's
+career come from a position they thought was lost.
+
+\subsection{Notation}
+
+At classical time controls, players are normally \emph{required} to record every
+move, their own and their opponent's, on a scoresheet. This is not busywork ---
+it is the evidence for any claim, and it is how a coach reviews the game
+afterwards.
+
+Common accommodations at BC junior events: assistance with notation is provided
+for the youngest section.
+
+At rapid and blitz, notation is generally not
+required at all.
+
+A child who cannot yet notate reliably should practise it at home before a
+classical event. It is a real skill and it competes for attention with the
+actual chess.
+
+\subsection{Recording the result --- the step sometimes forgotten}
+
+When the game ends:
+
+\begin{enumerate}
+  \item Stop the clock.
+  \item Shake hands.
+  \item \textbf{Both players sign both scoresheets} (classical events).
+  \item \textbf{Report the result} --- write it on the pairing sheet or tell
+        the arbiter, whichever the event uses.
+  \item Reset the pieces and the clock for the next round.
+  \item Leave the playing hall quietly.
+\end{enumerate}
+
+Step 4 is the one children sometimes skip, and it causes real problems: unreported results
+delay the next round's pairings for everybody. A signed scoresheet or reported
+result is also essentially final. Once your child has signed off on a loss, it
+is a loss, even if they signed the wrong line by accident. Teach them to check
+before they sign.
+
+\subsection{Calling the arbiter}
+
+The universal method: \textbf{raise a hand and wait silently}. Do not call out.
+Do not leave the board to go find someone. Do not ask a neighbouring player.
+Do not go and find a parent --- a parent cannot intervene in a game and
+attempting to do so will make things worse.
+
+\subsection{Being late}
+
+Each event publishes a \term{default time} --- how long after the round start a
+player may arrive before forfeiting. BC events commonly use 30 minutes for
+rapid rounds and up to 60 minutes for long classical rounds, but some events run
+``zero tolerance,'' where arriving after the round is called is an immediate
+forfeit. This is one of the details worth actually reading in the event
+announcement.
+
+Regardless of the rule, the clock starts at the scheduled time. Every minute
+late is a minute of your child's thinking time gone.
+
+\subsection{Electronic devices}
+
+Assume the strictest possible interpretation and you will be fine.
+
+Phones, smartwatches, tablets, earbuds, and anything else capable of making
+noise, communicating, or playing chess must be off --- not silent, \emph{off}
+--- and must not be accessible to the player during the game. Many organizers require them to be out of the
+playing hall entirely. Penalties range from a time penalty to immediate
+forfeiture, and arbiters do not much care that it was an accident.
+
+Anti-cheating measures at national championships held in BC sometimes include the organizer
+reserving the right to conduct non-invasive metal-detector checks; registering
+for the event constitutes consent. This is not paranoia --- online-assisted
+cheating is a genuine and growing problem in over-the-board chess, and the
+measures exist to protect honest players, including your child.
+
+The practical advice: leave the smartwatch at home. A child wearing one to a
+tournament is one distracted arbiter away from a forfeit.
+
+% ============================================================================
+\section{Etiquette and the culture of play}
+\label{sec:etiquette}
+
+\subsection{The handshake}
+
+Before the game: shake hands and say ``“have a good game”''.
+After the game: shake hands again, whatever the result, and say ``good game'' or
+``thank you.'' This is not optional politeness --- refusing a handshake is a
+sanctionable offence under the Laws of Chess and has ended professional careers.
+
+A child who loses badly and cannot manage a handshake is not a bad child; they
+are an eleven-year-old. But this is the thing to practise at home, because it is
+the thing the chess community will judge them on.
+
+\subsection{Silence}
+
+The playing hall is silent. Not quiet --- silent. No talking, no whispering, no
+humming, no commentary, no ``good move.'' The only permitted speech at the board
+is ``I adjust,'' a draw offer, ``I resign,'' and calling the arbiter.
+
+This extends further than newcomers expect. Do not talk to your opponent about
+the game. Do not talk to a player at another board, even one who has finished.
+Do not discuss a finished game anywhere near boards still in play. Do not
+comment on a game in progress, even to a parent, even in another language, even
+in a whisper. Spectators who interfere in a game can be expelled from the venue.
+
+\subsection{Staying at the board}
+
+Players may leave the playing area only while it is their opponent’s move. This rule exists
+for fair-play reasons and applies to bathroom trips too. In case of an urgent exception,
+contact the arbiter.
+
+A child who is losing and wanders off to find you has, from the arbiter's
+perspective, done something that ranges from thoughtless to suspicious. Explain
+in advance why the rule exists; children accept rules much better when they know
+the reason.
+
+\subsection{Not disturbing others}
+
+Fidgeting, humming, tapping, kicking table legs, and pacing distract everyone in
+a ten-foot radius. So does eating a bag of chips. Most BC organizers prohibit
+food and open drinks in the playing area entirely, permitting only closed-top
+water bottles and thermoses; snacks are eaten outside.
+
+If your child genuinely cannot sit still --- and many can't --- talk to the
+organizer in advance rather than hoping. Arbiters are generally accommodating
+when asked and generally not when surprised.
+
+\subsection{Watching other games}
+
+Spectators, including finished players, may watch, from a respectful distance,
+in silence, without hovering over a board. Nobody may communicate anything to a
+player. If a spectator notices an irregularity --- an illegal move, a flag that
+has fallen --- they may inform \emph{only the arbiter}, never the players.
+
+\subsection{After the game: analysis}
+
+The tradition of two opponents analysing the game together immediately
+afterwards is one of the best things about chess culture. It happens in the
+skittles room, never in the playing hall. Encourage it. A child who has just
+lost and then spends twenty minutes with the winner working out where they went
+wrong has extracted the entire value of the loss.
+
+\subsection{Youth events versus open events}
+
+Your child will eventually play in an open tournament --- one where adults, and
+occasionally masters, are in the field. The cultural differences are worth
+preparing for.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.2\textwidth}XX@{}}
+\toprule
+& \textbf{Youth events} & \textbf{Open events} \\
+\midrule
+Atmosphere & Loud outside the hall, chaotic, lots of parents, trophies for
+many & Quiet throughout, sparse, few spectators, prizes for few \\
+Pace & One day, rapid, five or six rounds & Whole weekend, classical, long
+evenings \\
+Opponents & Same age, similar experience & Anyone from a beginner to an IM;
+your child may play a 60-year-old club veteran \\
+Arbiting & Interventionist; arbiters expect to help & Hands-off; players are
+expected to know the rules \\
+Etiquette & Explained and forgiven & Assumed \\
+Tone & Encouraging & Businesslike --- not unfriendly, but not effusive \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Two specific things to tell your child before their first open:
+
+\begin{enumerate}
+  \item \textbf{Adults will not go easy on them}, and this is a compliment. An
+        adult who plays a child seriously is treating them as a real opponent.
+  \item \textbf{They will be taken seriously.} The chess community is unusual in
+        how completely it disregards age. A ten-year-old who plays well is
+        simply a strong player, and will be treated as one.
+\end{enumerate}
+
+Open events are also where children encounter the phenomenon of the adult who is
+visibly unhappy about losing to a child. It happens. It is not your child's
+problem, and the correct response is a handshake and a walk to the skittles room.
+
+% ============================================================================
+\section{The geography of a tournament}
+
+\subsection{The playing hall}
+
+Where the games happen. Rows of tables, numbered boards, clocks, silence. Only
+players and arbiters belong here once the round has started.
+
+Some events allow spectators along the perimeter; many junior events clear the
+hall entirely. Assume you will be asked to leave and be pleasantly surprised if
+you are not.
+
+\subsection{The skittles room}
+
+``Skittles'' is old chess slang for casual play. The skittles room --- sometimes
+called the analysis room, sometimes just ``the hallway'' --- is where finished
+players go to analyse, play blitz, eat, and decompress. It is noisy and it is
+where most of the social life of junior chess happens.
+
+If there is no designated skittles room, there is an implicit one: the cafeteria,
+the lobby, the corner of the parking lot. Find it early. It is where your child
+will make chess friends, which is the thing most likely to keep them playing.
+
+\subsection{Where parents go}
+
+Somewhere else. Most venues have a parents' area --- a lobby, a hallway, a
+neighbouring room. Bring a book, a laptop, or a fellow parent. Rounds are long.
+
+It is the parents' responsibility to stay within the vicinity of the playing hall / tournament venue. The TD's job is to run the tournament, and the arbiters' job is to make fair judgement and to resolve claims. They are not responsible for your child before and after each game.
+
+\subsection{Photography}
+
+The standard BC policy: photographs and video are permitted during the
+\textbf{first few minutes of each round only} --- five minutes is typical ---
+and must be discreet. After that, no photography in the playing hall at all.
+
+No flash, ever. Silence the shutter. Do not lean over a board. Do not photograph
+a position mid-game --- quite apart from the disturbance, it looks exactly like
+what a cheating parent would do.
+
+Also note the flip side: by entering the venue you generally consent to being
+photographed by the organizer for promotional use. If you would rather your
+child not appear in a club's Instagram feed, contact the organizer in advance ---
+they will almost always accommodate it, but they cannot accommodate a request
+they never received.
+
+\subsection{Food and drink}
+
+Closed-top water bottles at the board; everything else outside the playing area.
+Venue food ranges from ``a cafeteria'' to ``a vending machine that takes
+exact change.'' Check in advance and pack accordingly. Sugar crashes at round
+four are a real phenomenon.
+
+% ============================================================================
+\section{Rules that apply to you}
+\label{sec:parents}
+
+This is the section to read twice.
+
+\subsection{You may not coach. At all. In any form.}
+
+No advice, no hints, no gestures, no facial expressions, no eye contact
+across the room, no ``are you sure?'', no pointing, no head-shaking, no
+sharp intake of breath. Nothing.
+
+BC organizers state this in unusually blunt terms. Fraser Valley Chess Academy's
+published policy, for instance, is that parents assisting their children or
+suggesting moves will lead to \textbf{immediate disqualification of the player}.
+Note who is punished: not you. Your child.
+
+\subsection{Stay away from your child's board}
+
+Even if you say nothing. Even if you are simply anxious.
+
+Here is the reason, and it is worth understanding rather than just obeying:
+\textbf{modern chess cheating looks like a parent standing nearby}. An adult
+with a phone, positioned where they can see the board and be seen by the player,
+is the exact profile of assisted cheating. Arbiters are trained to watch for it.
+Your innocent hovering is indistinguishable, from ten metres away, from the
+thing they are looking for.
+
+So: watch from the back of the room if spectating is allowed, or from outside if
+it isn't. Do not stand at the end of your child's row. Do not catch their eye. Do
+not walk past ``just to see how it's going.'' If your child looks up and finds
+you watching, that is a problem for both of you.
+
+\subsection{Do not talk to the arbiter about your child's game}
+
+A player raises their own hand and makes their own claim. A parent who
+approaches the arbiter mid-game to raise an issue on their child's behalf is
+interfering in the game, and the arbiter will say so.
+
+\subsection{If you think something genuinely went wrong}
+
+Sometimes it does. A clock is set wrong; a result is recorded incorrectly; an
+opponent behaves badly; an arbiter makes a call you believe is mistaken. There
+is a proper channel.
+
+\begin{enumerate}
+  \item \textbf{First, get the facts from your child}, calmly and without
+        leading questions. Children misremember, and they especially misremember
+        in the direction of having been wronged.
+  \item \textbf{Approach the arbiter or TD between rounds}, politely, and ask
+        rather than accuse. Most issues dissolve here.
+  \item \textbf{If unresolved, appeal formally.} BC events typically appoint a
+        three-member appeals committee. Appeals must usually be submitted in
+        writing within an hour of the game ending and before the next round
+        starts, and --- this surprises people --- often require a deposit,
+        commonly \$150, refunded only if the appeal succeeds.
+  \item \textbf{The Appeal Committee’s decision is final}, as is the TD's decision on
+        conflicts. Final standings, once announced, are not reopened.
+\end{enumerate}
+
+The deposit exists to filter out frivolous appeals, and it works. If your
+complaint isn't worth \$150 of risk, it probably isn't worth an appeal.
+
+\subsection{Supervision}
+
+Organizers are running a chess tournament, not providing childcare, and they say
+so explicitly. A typical BC policy requires that elementary-age children (K--5)
+be accompanied by an adult at all times unless written arrangements have been
+made in advance.
+
+In practice this means: for young children, one parent stays for the duration.
+For older children, agree in advance where you will be and when you will check
+in, and stick to it.
+
+\subsection{Illness}
+
+Post-2020 policies are firm. Organizers reserve the right to ask anyone ---
+player, parent, or sibling --- with visible symptoms to withdraw or leave. A
+child who is coughing through a five-hour classical round is also not going to
+play well. If they are sick, take the bye.
+
+\subsection{Volunteering}
+
+Junior chess in BC runs on a startlingly small number of volunteers. If your
+family is going to be doing this for a few years, consider helping: setting up
+boards, running the results desk, driving a carpool, or --- if you find you enjoy
+the machinery --- taking arbiter training through the BCCF. It is also the
+fastest way to understand what is actually happening at a tournament.
+
+\subsection{Parent culture}
+Avoid comparisons between children’s ratings, coaches, results or perceived talent, particularly in front of the players. Parents are modelling sportsmanship as well.
+
+% ============================================================================
+\section{The part nobody warns you about}
+\label{sec:emotional}
+
+\subsection{Before the game}
+Before the game avoid discussing opponent ratings, standings, qualification scenarios, “must-win” games, etc. These can unintentionally create pressure for a child.
+
+\subsection{The debrief}
+
+Do not open with ``did you win?''
+
+This sounds like a small thing. It is not. A child who learns that the first
+question is always about the result learns that the result is the point. Try
+instead:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}XX@{}}
+\toprule
+\textbf{Instead of} & \textbf{Try} \\
+\midrule
+``Did you win?'' & ``How was the game?'' \\
+``What happened?!'' & ``Was it interesting?'' \\
+``You should have\ldots'' & ``What did you see at the end?'' \\
+``That was a terrible blunder.'' & ``What were you thinking about there?'' \\
+``You're better than that kid.'' & ``What did they do well?'' \\
+``Are you okay?'' (anxiously) & (a snack, and silence for ten minutes) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Some children want to talk immediately. Others need twenty minutes and food
+first. Learn which yours is and respect it.
+
+\subsection{Losses, and the round-four collapse}
+
+The characteristic failure mode of junior tournaments is not one bad game --- it
+is the cascade. A child loses round three, spends round four replaying round
+three in their head, loses that too, and by round five has stopped trying.
+
+Things that help:
+
+\begin{itemize}
+  \item \textbf{A physical reset between rounds.} Go outside. Walk around the
+        block. Get away from the venue and the boards.
+  \item \textbf{Food and water}, actually consumed, not carried around.
+  \item \textbf{Not analysing the loss immediately} if the next round is
+        imminent. Analysis is for the evening.
+  \item \textbf{Naming the pattern out loud} once, calmly, when they are calm:
+        ``the last game is over; the only game that exists is the next one.''
+        Children can internalise this remarkably well.
+\end{itemize}
+
+\subsection{Crying}
+
+Children cry at chess tournaments. Frequently. Nobody in the room will think
+badly of your child for it, because everyone there has either done it or
+watched their own child do it.
+
+Get them out of the playing hall, sit somewhere quiet, and do not immediately
+try to fix it. The reflex to say ``it's only a game'' is understandable and
+unhelpful --- to them, at that moment, it is not only a game. Acknowledge that it
+hurts. The perspective can come later.
+
+\subsection{Winning badly}
+
+The other side. A child who gloats, who announces their rating gain, who
+analyses loudly next to the player they beat, is doing real damage to their
+standing in a small community that will remember. Address it as directly as you
+would address poor sportsmanship in any other sport.
+
+\subsection{Sleep, food, and stamina}
+
+Chess is more physically demanding than it looks. A six-round classical weekend
+involves roughly twenty hours of sustained concentration. Elite players train
+physically for exactly this reason.
+
+For a junior: a normal bedtime the night before matters more than any amount of
+last-minute study. Breakfast matters. Lunch between rounds matters, and should
+be light --- a heavy meal before round four is a mistake children make once.
+
+\subsection{When to take a break}
+
+Some signals that the intensity has become unhealthy: dread before events rather
+than nerves; obsessive rating-checking; sleep disruption; a child who says they
+want to quit after every loss but not between times; loss of interest in playing
+casually for fun.
+
+Taking a season off, or dropping from four events a year to two, is not a
+failure. Chess will still be there. The children who are still playing at
+eighteen are, overwhelmingly, the ones who were allowed to enjoy it at ten.
+
+\subsection{Keeping the ambition with the child} 
+As children improve and more opportunities become available, parents naturally become more invested. It may be worth a brief reminder to make sure the child continues to enjoy the process and that the goals remain theirs.
+
+% ============================================================================
+\section{Money, time, and travel}
+
+\subsection{What it costs}
+
+Approximate BC figures for planning purposes, 2026:
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Item} & \textbf{Typical cost} \\
+\midrule
+CFC junior annual membership & \$25 \\
+CFC junior single-tournament fee (regular / quick) & \$8 / \$4 \\
+Local one-day rapid entry & \$35--\$50 \\
+Weekend classical or provincial championship entry & \$80--\$100 \\
+Side events (blitz, puzzle solving, simul) & \$20 each \\
+Group coaching, per term & \$200--\$500 \\
+Private coaching, per hour & \$50--\$150 \\
+Tournament chess set and clock (optional) & \$80--\$200 \\
+Nationals: travel, hotel, entry for one child + one parent & \$1{,}500--\$3{,}000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A child playing six or eight local events a year with group coaching is looking
+at roughly \$800--\$1{,}500 annually. Adding nationals roughly doubles or
+triples it.
+
+\subsection{Subsidies and prizes}
+
+Provincial championships often attach travel subsidies to top finishes ---
+the 2026 BCYCC allocated over \$7{,}000 in CYCC travel subsidies within an
+\$11{,}000 prize pool. These are usually paid as reimbursements \emph{after}
+your child has verifiably attended the national event, with a claim deadline
+some months later. Two practical notes: you must front the cost, and you must
+remember to claim. Unclaimed subsidies cascade to the next eligible player.
+
+Cash prizes at BC events are now typically paid by e-transfer within two or three days rather than in cash on site.
+
+\subsection{Coaching}
+
+You do not need a coach for the first year. What a child needs first is volume:
+games, puzzles, and a club.
+
+When you do look for one, the useful questions are about fit rather than title.
+Does the coach work well with children of this age? Do they give homework and
+follow up? Do they watch your child's actual tournament games, or only teach
+generic material? Can your child explain what they worked on last session?
+
+A strong player is not automatically a good coach for a nine-year-old, and a
+FIDE title tells you about playing strength, not teaching ability.
+
+\subsection{The time cost}
+
+Be honest with yourself early. A one-day rapid consumes a full Saturday for the
+whole family. A weekend classical consumes the weekend. Nationals consume a week
+and a flight. If there are siblings, the arithmetic gets harder. Families that
+last in junior chess tend to be the ones that decided in advance how many events
+a year they were prepared to do.
+
+% ============================================================================
+\section{Girls' sections, inclusion, and accessibility}
+
+\paragraph{Girls' sections.} Most BC and Canadian youth championships run
+parallel Open and Girls sections at each age group. ``Open'' means open to
+everyone, including girls; the Girls sections exist alongside it, not instead of
+it. Girls may enter either.
+
+The choice is a real one and worth discussing rather than defaulting. Open
+sections are typically larger and stronger, so they offer harder games. Girls
+sections offer a better shot at a title, a travel subsidy, and a peer group ---
+and the qualification rule bites here too: a girl who qualifies for nationals
+from an Open section must play the Open section at nationals.
+
+Chess has a well-documented retention problem with girls, who enter the game in
+reasonable numbers and drop out disproportionately in the early teens. A
+sustained peer group is the single best-evidenced retention factor. Seek one out.
+
+\paragraph{Accommodations.} Arbiters can and do accommodate players who need to
+move around, who need assistance with notation, who need a quieter corner, or who
+need a scribe or physical assistance with the pieces --- the Laws of Chess
+explicitly provide for an assistant to move the pieces for a player who cannot.
+Contact the organizer well before the event, in writing. Arbiters might
+not be able to improvise an accommodation ten minutes before round one.
+
+\paragraph{Accessibility and venues.} BC events run in university gyms,
+recreation centres, community halls, and hotels. Accessibility, parking,
+transit, and even the availability of chairs of a suitable size for a
+six-year-old vary enormously. Check the venue, not just the event.
+
+\paragraph{Language.} Metro Vancouver junior chess is strikingly multilingual,
+and this is a feature. One caution to pass to your child: the no-talking rule
+applies in every language, and speaking to your opponent in a shared language
+that the arbiter does not understand will attract attention.
+
+% ============================================================================
+\section{Going further}
+
+\subsection{The provincial and national ladder, recapped}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.28\textwidth}X@{}}
+\toprule
+\textbf{Step} & \textbf{What it is} \\
+\midrule
+Clubs & Clubs provide a friendly learning environment and camaraderie. \\
+CYCC qualifiers & Any designated junior event. Score 50\%+ over at least three
+games to qualify. \\
+BC Youth Chess Championship & The sanctioned provincial qualifier, typically
+March. Age sections, Open and Girls. Perpetual trophies, travel subsidies. \\
+Chess Challenge regionals & Grade-based, fall through winter, mostly at UBC and
+in Victoria. \\
+BC Chess Challenge provincial & April. The twelve grade winners become Team BC. \\
+BC High School Chess Championship & Run by the BCJCA. \\
+Canadian Youth Chess Championship & National age-group championship, early July.
+Host city varies. \\
+Canadian Chess Challenge & National grade championship, Victoria Day weekend. Host city varies. \\
+World Cadet / World Youth & For CYCC top finishers. Host city varies. For example, 2026: World Cadet in
+Batumi, Georgia; World Youth in Montesilvano, Italy. \\
+North American Youth Chess Championship (NAYCC) & An annual regional championship open to players from Canada, Mexico, and the United States, held in Open and Girls sections across six two-year age brackets from Under-8 through Under-18 \\
+Pan-American Youth Chess Championship & The continental championship covering North, Central, and South America and the Caribbean, run in similar Open/Girls age categories. Entry is federation-controlled: each country sends an Official Representative. \\
+World School(s) Chess Championship & (the FIDE/ISCF World Schools Team Championship) — A team event for school-age children jointly run by FIDE and the International School Chess Federation; for the 2026 edition, eligible players must be born between January 1, 2012 and December 31, 2018, and each team needs at least one boy and one girl. Teams qualify through continental stages (for the Americas, via national school championships or top FIDE ratings) before a Grand Final. \\
+FIDE World Cadets Cup & The global individual championship for the youngest age groups: Under-8, Under-10, and Under-12, each in Open and Girls sections, with age determined as of January 1 of the tournament year. Each national federation may register one official player per section. \\
+FIDE World Youth Chess Championship & The global individual championship for Under-14, Under-16, and Under-18 players (Open and Girls), age set as of January 1. Each national federation may send one official player per section. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Note that for the international events in the table above, eligibility and registration pathways vary by event and may change from year to year. Canadian players should check with the CFC for current eligibility and registration requirements.
+
+\paragraph{} For families who do travel beyond BC for chess, note that sleep, food, travel fatigue and keeping the experience enjoyable can matter as much as additional preparation. It is important that children never feel they need to produce a particular result simply because the family has invested significant time or money in getting them there.
+
+\subsection{FIDE-rated play and titles}
+
+At some point a strong junior will want an international rating. In BC that
+means entering FIDE-rated opens --- the BC Open in Vancouver on Family Day weekend, the Grand Pacific
+Open in Victoria on Easter Weekend, the Paul Keres Memorial in Vancouver on the Victoria
+Day Weekend and the Richmond International Chess Festival at Christmas are good
+options.
+
+Titles (CM, WCM, FM, WFM, IM, WIM, GM, WGM) are awarded by FIDE against rating
+and performance criteria. BC produces several new title-holders a year, and the
+BCCF announces them. This is a long way down the road from a first tournament,
+and it is not a goal to set for a nine-year-old.
+
+\subsection{Adult and open events}
+
+The most useful thing a developing junior can do in BC is play adults. Club
+nights are free or nearly free, run weekly, and provide classical games against
+serious opposition. Section \ref{sec:etiquette} covers what to expect culturally.
+
+% ============================================================================
+\newpage
+\appendix
+
+\section{First-tournament checklist}
+\label{app:checklist}
+
+\subsection*{Two weeks before}
+\begin{itemize}
+  \item[$\square$] Create a CFC ID (allow several days). Some organizers will help with this. 
+  \item[$\square$] Decide on membership versus single-tournament fee.
+  \item[$\square$] Register; note the early-bird deadline.
+  \item[$\square$] Note the \emph{refund} deadline in your calendar.
+  \item[$\square$] Read the event's rules page --- sections, time control,
+        default time, bye policy, photography, device policy.
+  \item[$\square$] Request any byes in writing.
+  \item[$\square$] Notify the organizer of any accommodation needs.
+\end{itemize}
+
+\subsection*{The week before}
+\begin{itemize}
+  \item[$\square$] Confirm venue, parking, and start time.
+  \item[$\square$] Practise notation if the event is classical.
+  \item[$\square$] Talk through: touch-move, the handshake, silence, raising a
+        hand for the arbiter, reporting the result.
+  \item[$\square$] Warn them about round one.
+\end{itemize}
+
+\subsection*{The night before}
+\begin{itemize}
+  \item[$\square$] Normal bedtime. This matters more than anything else on this
+        list.
+  \item[$\square$] Pack the bag.
+\end{itemize}
+
+\subsection*{In the bag}
+\begin{itemize}
+  \item[$\square$] Two pens
+  \item[$\square$] Closed-top water bottle
+  \item[$\square$] Snacks (eaten outside the playing hall)
+  \item[$\square$] Lunch, or a plan for lunch
+  \item[$\square$] Sweater or hoodie
+  \item[$\square$] Book, puzzles, or cards for between rounds
+  \item[$\square$] Any medication
+  \item[$\square$] Chess set and clock, \emph{if} the organizer asks for them
+  \item[$\square$] Your own book, laptop, or podcast --- the day is long
+\end{itemize}
+
+\subsection*{Leave at home}
+\begin{itemize}
+  \item[$\square$] Smartwatch
+  \item[$\square$] Earbuds
+  \item[$\square$] Any expectation about the result
+\end{itemize}
+
+\section{A typical tournament day}
+
+A one-day, five-round rapid event. Times are illustrative; rounds usually start
+``ASAP'' after the previous one finishes, so the schedule drifts \emph{earlier}
+as the day goes on. Never leave the venue assuming you have an hour.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}X@{}}
+\toprule
+\textbf{Time} & \textbf{What happens} \\
+\midrule
+8:30 & Doors open. Find the section, the pairing board, the washrooms, the
+skittles area, and where you will be sitting. \\
+9:00 & Check-in if required. Round 1 pairings posted. \\
+9:20 & Announcements. Listen carefully for important information \\
+9:30 & Round 1. Clocks start on time whether or not your child is there. \\
+9:35 & Photography window closes. Parents leave the hall. \\
+10:30 & Round 2, or whenever round 1 finishes. Short break; get them outside. \\
+11:30 & Round 3. \\
+12:30 & Lunch. Light. Away from the boards if possible. \\
+13:00 & Round 4. The round where tiredness shows. \\
+14:00 & Round 5. \\
+15:00 & Results finalised, tiebreaks applied, prizes. If your child wins a prize, do not leave before the
+ceremony without telling the organizer. \\
+15:30 & Home. Debrief later, not in the car. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Glossary}
+
+\begin{description}[leftmargin=0pt,style=nextline,itemsep=3pt]
+  \item[Arbiter] The official who enforces the rules of play.
+  \item[Bye] A round not played. Half-point (requested), zero-point (penalty),
+        or full-point (assigned for an odd field).
+  \item[Buchholz] A tiebreak: the sum of your opponents' scores.
+  \item[CFC] Chess Federation of Canada.
+  \item[BCCF] British Columbia Chess Federation.
+  \item[Classical / Standard] Time control giving 60 minutes or more per player
+        for a 60-move game.
+  \item[Crosstable] The grid of all results in an event.
+  \item[CYCC] Canadian Youth Chess Championship.
+  \item[Default time] How late a player may arrive before forfeiting.
+  \item[Flag] Historically the marker that fell when a mechanical clock hit
+        zero. ``Flag fall'' still means running out of time.
+  \item[Increment] Time added to a player's clock after each move.
+  \item[J'adoube] ``I adjust'' --- said before touching a piece to straighten it.
+  \item[Norm] A qualifying performance toward an international title.
+  \item[Playing up] Entering a section above your rating or age group.
+  \item[Provisional rating] A rating based on fewer than 25 rated games.
+  \item[Quick / Active / Rapid] CFC's rating category for faster games.
+  \item[Scoresheet] The form on which moves are recorded.
+  \item[Skittles] Casual play; by extension, the room where it happens.
+  \item[Swiss system] The pairing method used by almost all tournaments.
+  \item[TD] Tournament Director.
+  \item[Tiebreak] A calculation used to rank players on equal scores.
+  \item[Touch-move] The rule that a touched piece must be moved.
+\end{description}
+
+\section{Directory}
+\label{sec:directory}
+
+\subsection*{Federations}
+\begin{itemize}
+  \item British Columbia Chess Federation --- \url{https://chess.bc.ca}
+  \item BCCF events calendar --- \url{https://chess.bc.ca/events/}
+  \item BCCF club list --- \url{https://chess.bc.ca/clubs/}
+  \item Chess Federation of Canada --- \url{https://www.chess.ca}
+  \item CFC join / renew --- \url{https://www.chess.ca/en/players/membership-join/}
+  \item CFC membership fees --- \url{https://www.chess.ca/en/players/membership-fees/}
+  \item CFC ratings lookup --- \url{https://www.chess.ca/en/ratings/}
+  \item CYCC qualifier rules --- \url{https://www.chess.ca/en/organizers/events/cycc-qualifer/}
+  \item FIDE Laws of Chess --- \url{https://handbook.fide.com/chapter/E012023}
+\end{itemize}
+
+\subsection*{BC organizers running junior events}
+\begin{itemize}
+  \item Vancouver Chess School --- \url{https://www.vanchess.ca}
+  \item Fraser Valley Chess Academy --- \url{https://fraservalleychess.com}
+  \item Penny Chess Club (Burnaby) --- \url{https://www.pennychessclub.ca}
+  \item Richmond Chess Champions --- \url{https://www.richmondchesschampions.com}
+  \item Langley Chess Club --- \url{https://langleychess.com}
+  \item Chess2Inspire --- \url{http://chess2inspire.org}
+  \item BC Junior Chess Association --- \url{https://www.bcjca.ca}
+  \item Juniors to Masters Chess Academy – \url{https://juniorstomasters.site123.me}
+\end{itemize}
+
+\subsection*{Pairings and results platforms}
+\begin{itemize}
+  \item ChessRoster --- \url{https://www.chessroster.com}
+  \item SwissSys --- \url{https://www.swisssys.com}
+  \item Chess-Results --- \url{https://chess-results.com}
+\end{itemize}
+
+\newpage
+\section{One page for the fridge}
+\label{app:fridge}
+
+\begin{keybox}{Before the event}
+Register early. Get the CFC ID sorted a few days ahead. Read the event rules page.
+Request byes in writing. Note the refund deadline. Normal bedtime the night
+before.
+\end{keybox}
+
+\begin{keybox}{Tell your child}
+Touch a piece, move it. Say ``I adjust'' first if straightening. Move, then press
+the clock with the same hand. Shake hands before and after, every game. Silence
+in the hall. Raise a hand for the arbiter --- never call out, never leave the
+hall to find a parent. Write down the moves. \textbf{Report the result and check
+before signing.} Round one means nothing.
+\end{keybox}
+
+\begin{keybox}{Rules for you}
+No coaching --- not a word, not a look. Stay away from their board; from ten
+metres away, an anxious parent looks exactly like a cheating one. Photos in the
+first five minutes only, no flash, then put the phone away. Do not approach the
+arbiter about a game in progress. Leave the smartwatch at home.
+\end{keybox}
+
+\begin{keybox}{Between rounds}
+Get them outside. Water and a light snack. No post-mortems until the day is
+over. ``The last game is over; the only game that exists is the next one.''
+\end{keybox}
+
+\begin{keybox}{Afterwards}
+Do not open with ``did you win?'' Try ``how was the game?'' --- then wait.
+Some children need twenty minutes and a sandwich first. The result is the
+smallest thing that happened today.
+\end{keybox}
+
+\end{document}
