@@ -9,5 +9,6 @@ location: Maple Ridge Library, 22470 Dewdney Trunk Rd, Maple Ridge, BC
 contact: Dejan Radic at (604) 551-2591
 email: info@mapleridgechess.ca
 website: https://mapleridgechess.ca/chess-club/
-last_update: 2026-08-19
+image: /images/uploads/maple-ridge.jpg
+last_update: 2026-09-02
 ---
