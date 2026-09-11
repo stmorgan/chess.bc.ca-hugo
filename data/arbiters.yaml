@@ -85,6 +85,7 @@ groups:
       - name: May Wangluo
         cfc_no: "175328"
         comments: Richmond
+        email: "maywangluo0518@gmail.com "
   - title: International and FIDE Arbiters
     arbiters:
       - name: Stephen Wright
