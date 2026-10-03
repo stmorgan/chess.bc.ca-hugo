@@ -8,3 +8,6 @@ contact: Glen at 250-713-5506
 website: https://www.facebook.com/groups/411428646220143/
 last_update: 2026-07-31
 ---
+The group is moving on Thursday October 15th to its new location Woodgrove Centre in the food court from 4pm to closing.
+
+Bring sets and clocks.
