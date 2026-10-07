@@ -114,3 +114,8 @@ weight = 90
 name = "Game Databases"
 pageRef = "/games"
 weight = 100
+
+[[menus.org]]
+name = "NM, NA Titles"
+url = "/files/2026-how-to-achieve-nm-na-titles.pdf"
+weight = 110
