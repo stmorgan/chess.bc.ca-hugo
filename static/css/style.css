@@ -314,6 +314,17 @@ h3 {
   text-align: center;
 }
 
+.home-feature {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.home-feature img {
+  display: block;
+  margin: 0 auto;
+  max-width: min(100%, 32rem);
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
