@@ -1,14 +1,18 @@
 ---
 type: clubs
-title: "Vancouver Beer&Chess"
-city: "Vancouver"
-meets: "Bi-weekly - See the website!"
-website: "https://www.meetup.com/vancouver-beer-chess/"
-last_update: 2025-06-01
+title: Vancouver Beer&Chess
+city: Vancouver
+meets: Weekly
+location: Varies by event.
+email: hello@vancouverbeerchess.com
+website: https://flocksocial.app/c/vancouverbeerchess
+image: /images/uploads/20250827t211652_att.uiuzsklv9g5oszuxrw-iyjywede0ofnllmu0v4eaa-m.jpg
+last_update: 2026-10-24
 ---
+VBC is a social club that brings chess to unexpected places.
 
-Where: See the website!
+RSVP: [flocksocial.app/c/vancouverbeerchess](http://flocksocial.app/c/vancouverbeerchess) 
 
-Misc: We host bi-weekly events (usually one on a weekday and one on a Sunday) open to all levels. Usually about 30-40 people come each event.
+Instagram: <https://www.instagram.com/vancouverbeerchess/>
 
-Instagram:  [https://www.instagram.com/vancouverbeerchess/](https://www.instagram.com/vancouverbeerchess/)
+Event costs range from free to $30.  RSVP to get event info.
