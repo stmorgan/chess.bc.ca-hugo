@@ -1,6 +1,6 @@
 ---
 type: news
-title: 2026 BC Chess Champinship
+title: 2026 BC Chess Championship
 date: 2026-10-13
 expiry_date: 2026-10-27
 ---
