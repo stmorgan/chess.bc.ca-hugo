@@ -42,6 +42,10 @@ groups:
         cfc_no: "143038"
         email: ijroback@gmail.com
         comments: Vancouver
+      - name: Jason Williamson
+        cfc_no: "106287"
+        email: nexus6ca@gmail.com
+        comments: Nanaimo
       - name: Kyle Van Dijk
         cfc_no: "177185"
         email: kyle.vandijk@gmail.com
@@ -54,6 +58,10 @@ groups:
         cfc_no: "163561"
         email: quizball@hotmail.com
         comments: Abbotsford
+      - name: May Wangluo
+        cfc_no: "175328"
+        comments: Richmond
+        email: "maywangluo0518@gmail.com "
       - name: Murray Chu
         cfc_no: "120492"
         email: murraychu@gmail.com
@@ -82,10 +90,6 @@ groups:
         cfc_no: "105650"
         email: ""
         comments: Surrey
-      - name: May Wangluo
-        cfc_no: "175328"
-        comments: Richmond
-        email: "maywangluo0518@gmail.com "
   - title: International and FIDE Arbiters
     arbiters:
       - name: Stephen Wright
