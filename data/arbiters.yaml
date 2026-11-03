@@ -38,22 +38,22 @@ groups:
         cfc_no: "191911"
         email: zhueric123@gmail.com
         comments: Vancouver
-      - name: Joe Roback
-        cfc_no: "143038"
-        email: ijroback@gmail.com
-        comments: Vancouver
       - name: Jason Williamson
         cfc_no: "106287"
         email: nexus6ca@gmail.com
         comments: Nanaimo
-      - name: Kyle Van Dijk
-        cfc_no: "177185"
-        email: kyle.vandijk@gmail.com
-        comments: Abbotsford
+      - name: Joe Roback
+        cfc_no: "143038"
+        email: ijroback@gmail.com
+        comments: Vancouver
       - name: Johnny Dong
         cfc_no: "178112"
         email: johnnydong1010@gmail.com
         comments: Burnaby
+      - name: Kyle Van Dijk
+        cfc_no: "177185"
+        email: kyle.vandijk@gmail.com
+        comments: Abbotsford
       - name: Marc Moisan
         cfc_no: "163561"
         email: quizball@hotmail.com
